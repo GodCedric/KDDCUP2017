@@ -8,7 +8,7 @@ import math
 from datetime import datetime,timedelta
 
 file_suffix = '.csv'
-path = '../'  # set the data directory
+path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/training/'  # set the data directory
 
 def avgVolume(in_file):
 
