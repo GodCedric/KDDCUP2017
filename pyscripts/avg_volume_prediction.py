@@ -48,18 +48,8 @@ def avg_volume_prediction(in_file):
 
     # 步骤3：将平均流量按日期分开
     volumes2 = {}  #{收费站：{进出方向：{周一到周七：{时间段，[流量列表]}}}}
-    time_reslut_sequence = [time(8,0,0)]
-    time_reslut_sequence.append(time(8, 20, 0))
-    time_reslut_sequence.append(time(8, 40, 0))
-    time_reslut_sequence.append(time(9, 0, 0))
-    time_reslut_sequence.append(time(9, 20, 0))
-    time_reslut_sequence.append(time(9, 40, 0))
-    time_reslut_sequence.append(time(17, 0, 0))
-    time_reslut_sequence.append(time(17, 20, 0))
-    time_reslut_sequence.append(time(17, 40, 0))
-    time_reslut_sequence.append(time(18, 0, 0))
-    time_reslut_sequence.append(time(18, 20, 0))
-    time_reslut_sequence.append(time(18, 40, 0))
+    time_reslut_sequence = ['08:00:00','08:20:00','08:40:00','09:00:00','09:20:00','09:40:00',
+                            '17:00:00','17:20:00','17:40:00','18:00:00','18:20:00','18:40:00',]
 
     volumes2[1] = {0: {0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {}},
                    1: {0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {}}}

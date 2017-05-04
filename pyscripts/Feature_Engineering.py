@@ -34,7 +34,6 @@ def main():
     #将原始数据转换成用于预测的平均消耗时间
     in_file_tt_o = 'trajectories(table 5)_training'
     dt.avgTravelTime(in_file_tt_o, path_train_in, path_train_out)
-
     #将原始数据转换成用于预测的车流量
     in_file_volume_o = 'volume(table 6)_training'
     dt.avgVolume(in_file_volume_o, path_train_in, path_train_out)
@@ -44,7 +43,6 @@ def main():
     #将原始数据转换成用于预测的平均消耗时间
     in_file_tt_t = 'trajectories(table 5)_test1'
     dt.avgTravelTime(in_file_tt_t, path_test_in, path_test_out)
-
     #将原始数据转换成用于预测的车流量
     in_file_volume_t = 'volume(table 6)_test1'
     dt.avgVolume(in_file_volume_t, path_test_in, path_test_out)
@@ -62,15 +60,26 @@ def main():
     df.dateVolume(in_file_av, in_file_weather, path_train)
     df.hourVolume(in_file_av, in_file_weather, path_train)
 
+    #将二次转换后的数据按样本格式整理好
+    in_file_att = 'training_20min_hour_travel_time'
+    df.hourTravelTimeSample(in_file_att, in_file_weather, path_train)
+    in_file_av = 'training_20min_hour_volume'
+    df.hourVolumeSample(in_file_av, in_file_weather, path_train)
+
 
     #测试数据抽取
-    in_file_att_t = 'test1_20min_avg_travel_time'
+    in_file_at_t = 'test1_20min_avg_travel_time'
     in_file_weather_t = 'weather (table 7)_test1'
-    df.hourTravelTime(in_file_att_t, in_file_weather_t, path_test)
-    
+    df.hourTravelTime(in_file_at_t, in_file_weather_t, path_test)
+    in_file_at_t = 'test1_20min_hour_travel_time'
+    df.hourTravelTimeSample(in_file_at_t, in_file_weather_t, path_test)
+    df.TestWeatherDataTravelTime('test1_20min_hour_travel_time_sample', path_test)
+
     in_file_av_t = 'test1_20min_avg_volume'
     df.hourVolume(in_file_av_t, in_file_weather_t, path_test)
-
+    in_file_av_t = 'test1_20min_hour_volume'
+    df.hourVolumeSample(in_file_av_t, in_file_weather_t, path_test)
+    df.TestWeatherDataVolume('test1_20min_hour_volume_sample', path_test)
 
 
 
