@@ -8,18 +8,15 @@
 import numpy as np
 import pandas as pd
 
-file_suffix = '.csv'
-path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/training/'  # set the data directory
 
 # 提取travel_time数据
-def extract_travel_time(in_file):
+def extract_travel_time():
 
-    raw_data = pd.read_csv(in_file)
-    print(raw_data.columns)
-    print(raw_data.index)
+    in_file_path = '/home/godcedric/GitLocal/KDDCUP2017/result/training_20min_avg_travel_time.csv'
 
-    print('hello')
-    print('hello')
+    raw_data = pd.read_csv(in_file_path)
+
+
 
 
 
@@ -28,8 +25,8 @@ def extract_travel_time(in_file):
 
 
 def main():
-    in_file = path + 'trajectories(table 5)_training' + file_suffix
-    extract_travel_time(in_file)
+
+    extract_travel_time()
 
 
 if __name__ == '__main__':

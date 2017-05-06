@@ -51,8 +51,8 @@ def dateTravelTime(in_file, in_file_weather, path):
             wea_day = temp_sample[0]
             wea_hour = temp_sample[1]
         else:
-            temp_sample = wea_data[wea_num].strip().split(',')
-            temp_day = datetime.strptime(temp_sample[0], '%Y/%m/%d')
+            temp_sample = wea_data[wea_num].replace('"', '').strip().split(',')
+            temp_day = datetime.strptime(temp_sample[0], '%Y-%m-%d')
             wea_day = datetime.strftime(temp_day, '%Y-%m-%d')
             wea_hour = temp_sample[1]
         # 判断路线对应的存储字典是否存在
@@ -94,7 +94,8 @@ def dateTravelTime(in_file, in_file_weather, path):
                 
                 if temp_weekday not in att[att_route][tw]:
                     att[att_route][tw][temp_weekday] = []
-                att[att_route][tw][temp_weekday].append(wea[weather_day_key][weather_hour_key] + ' ' + temp_sample[4].strip())
+                if weather_day_key in wea.keys():
+                    att[att_route][tw][temp_weekday].append(wea[weather_day_key][weather_hour_key] + ' ' + temp_sample[4].strip())
             else:
                 continue
         att_num += 1
@@ -159,8 +160,8 @@ def dateVolume(in_file, in_file_weather, path):
             wea_day = temp_sample[0]
             wea_hour = temp_sample[1]
         else:
-            temp_sample = wea_data[wea_num].strip().split(',')
-            temp_day = datetime.strptime(temp_sample[0], '%Y/%m/%d')
+            temp_sample = wea_data[wea_num].replace('"', '').strip().split(',')
+            temp_day = datetime.strptime(temp_sample[0], '%Y-%m-%d')
             wea_day = datetime.strftime(temp_day, '%Y-%m-%d')
             wea_hour = temp_sample[1]
         if  wea_day not in wea.keys():
@@ -201,7 +202,8 @@ def dateVolume(in_file, in_file_weather, path):
 
                 weather_hour_key = str(math.floor(int(tw[1:3])/3) * 3)
                 weather_day_key = temp_sample[1][1:11]
-                av[av_toll_dir][tw][temp_weekday].append(wea[weather_day_key][weather_hour_key] + ' ' + temp_sample[4].strip())
+                if weather_day_key in wea.keys():
+                    av[av_toll_dir][tw][temp_weekday].append(wea[weather_day_key][weather_hour_key] + ' ' + temp_sample[4].strip())
             else:
                 continue
         av_num += 1
@@ -258,8 +260,8 @@ def hourTravelTime(in_file, in_file_weather, path):
             wea_day = temp_sample[0]
             wea_hour = temp_sample[1]
         else:
-            temp_sample = wea_data[wea_num].strip().split(',')
-            temp_day = datetime.strptime(temp_sample[0], '%Y/%m/%d')
+            temp_sample = wea_data[wea_num].replace('"', '').strip().split(',')
+            temp_day = datetime.strptime(temp_sample[0], '%Y-%m-%d')
             wea_day = datetime.strftime(temp_day, '%Y-%m-%d')[0:10]
             wea_hour = temp_sample[1]
         if  wea_day not in wea.keys():
@@ -305,7 +307,8 @@ def hourTravelTime(in_file, in_file_weather, path):
 
         temp_day = temp_sample[2][1:11]
         temp_wea_hour = str(math.floor(int(tw[1:3])/3) * 3)
-        htt[htt_route][temp_weekday][tw][temp_sample[2][1:11]].append(wea[temp_day][temp_wea_hour] + ':' + temp_sample[4].strip())
+        if temp_day in wea.keys():
+            htt[htt_route][temp_weekday][tw][temp_sample[2][1:11]].append(wea[temp_day][temp_wea_hour] + ':' + temp_sample[4].strip())
         '''
         #将绿色时隙中的时间窗口的数据存入一个暂时的列表，当某一绿色时隙段（6个窗口）都存入列表后，
         #再将该暂时列表传入htt字典对应的位置处
@@ -372,8 +375,8 @@ def hourVolume(in_file, in_file_weather, path):
             wea_day = temp_sample[0]
             wea_hour = temp_sample[1]
         else:
-            temp_sample = wea_data[wea_num].strip().split(',')
-            temp_day = datetime.strptime(temp_sample[0], '%Y/%m/%d')
+            temp_sample = wea_data[wea_num].replace('"', '').strip().split(',')
+            temp_day = datetime.strptime(temp_sample[0], '%Y-%m-%d')
             wea_day = datetime.strftime(temp_day, '%Y-%m-%d')[0:10]
             wea_hour = temp_sample[1]
         if  wea_day not in wea.keys():
@@ -420,7 +423,8 @@ def hourVolume(in_file, in_file_weather, path):
 
         temp_day = temp_sample[1][1:11]
         temp_wea_hour = str(math.floor(int(tw[1:3])/3) * 3)
-        hav[hav_toll_dir][temp_weekday][tw][temp_sample[1][1:11]].append(wea[temp_day][temp_wea_hour] + ':' + temp_sample[4].strip())        
+        if temp_day in wea:
+            hav[hav_toll_dir][temp_weekday][tw][temp_sample[1][1:11]].append(wea[temp_day][temp_wea_hour] + ':' + temp_sample[4].strip())
         '''
         #将绿色时隙中的时间窗口的数据存入一个暂时的列表，当某一绿色时隙段（6个窗口）都存入列表后，
         #再将该暂时列表传入htt字典对应的位置处
@@ -492,8 +496,8 @@ def hourTravelTimeSample(in_file, in_file_weather, path):
             wea_day = temp_sample[0]
             wea_hour = temp_sample[1]
         else:
-            temp_sample = wea_data[wea_num].strip().split(',')
-            temp_day = datetime.strptime(temp_sample[0], '%Y/%m/%d')
+            temp_sample = wea_data[wea_num].replace('"', '').strip().split(',')
+            temp_day = datetime.strptime(temp_sample[0], '%Y-%m-%d')
             wea_day = datetime.strftime(temp_day, '%Y-%m-%d')[0:10]
             wea_hour = temp_sample[1]
         if  wea_day not in wea.keys():
@@ -538,7 +542,8 @@ def hourTravelTimeSample(in_file, in_file_weather, path):
         wea_day = temp_sample[4]
         for eachKey in htt[htt_route][temp_sample[2]][time_window_attribute].keys():
             wea_hour = str(math.floor(int(eachKey[0:2])/3) * 3)
-            htt[htt_route][temp_sample[2]][time_window_attribute][eachKey].append('|'.join(temp_sample[5].strip().split(';')) + '|' + wea[wea_day][wea_hour])
+            if wea_day in wea.keys():
+                htt[htt_route][temp_sample[2]][time_window_attribute][eachKey].append('|'.join(temp_sample[5].strip().split(';')) + '|' + wea[wea_day][wea_hour])
         htt_num += 1
         
     
@@ -603,8 +608,8 @@ def hourVolumeSample(in_file, in_file_weather, path):
             wea_day = temp_sample[0]
             wea_hour = temp_sample[1]
         else:
-            temp_sample = wea_data[wea_num].strip().split(',')
-            temp_day = datetime.strptime(temp_sample[0], '%Y/%m/%d')
+            temp_sample = wea_data[wea_num].replace('"', '').strip().split(',')
+            temp_day = datetime.strptime(temp_sample[0], '%Y-%m-%d')
             wea_day = datetime.strftime(temp_day, '%Y-%m-%d')[0:10]
             wea_hour = temp_sample[1]
         if  wea_day not in wea.keys():
@@ -649,7 +654,8 @@ def hourVolumeSample(in_file, in_file_weather, path):
         wea_day = temp_sample[4]
         for eachKey in hav[hav_toll_dir][temp_weekday][time_window_attribute].keys():
             wea_hour = str(math.floor(int(eachKey[0:2])/3) * 3)
-            hav[hav_toll_dir][temp_weekday][time_window_attribute][eachKey].append('|'.join(temp_sample[5].strip().split(';')) + '|' + wea[wea_day][wea_hour])
+            if wea_day in wea.keys():
+                hav[hav_toll_dir][temp_weekday][time_window_attribute][eachKey].append('|'.join(temp_sample[5].strip().split(';')) + '|' + wea[wea_day][wea_hour])
         hav_num += 1
         
 

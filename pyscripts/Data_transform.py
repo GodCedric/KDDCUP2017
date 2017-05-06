@@ -135,10 +135,10 @@ def avgVolume(in_file, path_in, path_out):
 def main():
     
     #定义训练数据和测试数据的输入路径与输出路径
-    path_train_in = 'd:/KDD Cup 2017/dataSets/training/'
-    path_train_out = 'd:/KDD Cup 2017/dataSets/training/DataProcessed/'  # set the data directory
-    path_test_in = 'd:/KDD Cup 2017/dataSets/testing_phase1/'
-    path_test_out = 'd:/KDD Cup 2017/dataSets/testing_phase1/DataProcessed/'
+    path_train_in = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/training/'
+    path_train_out = '/home/godcedric/GitLocal/KDDCUP2017/result/'
+    path_test_in = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/testing_phase1/'
+    path_test_out = '/home/godcedric/GitLocal/KDDCUP2017/result/'
 
 
     #训练数据转换

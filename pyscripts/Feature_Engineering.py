@@ -19,15 +19,14 @@ import Data_format as df
 
 def main():
     #定义原始数据集的输入路径与输出路径
-    path_train_in = 'd:/KDD Cup 2017/dataSets/training/'
-    path_train_out = 'd:/KDD Cup 2017/dataSets/training/DataProcessed/'  # set the data directory
-    path_test_in = 'd:/KDD Cup 2017/dataSets/testing_phase1/'
-    path_test_out = 'd:/KDD Cup 2017/dataSets/testing_phase1/DataProcessed/'
+    path_train_in = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/training/'
+    path_train_out = '/home/godcedric/GitLocal/KDDCUP2017/result/'
+    path_test_in = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/testing_phase1/'
+    path_test_out = '/home/godcedric/GitLocal/KDDCUP2017/result/'
 
     #定义预处理得到数据的路劲
-    path_train = 'd:/KDD Cup 2017/dataSets/training/DataProcessed/'
-    path_test = 'd:/KDD Cup 2017/dataSets/testing_phase1/DataProcessed/'
-
+    path_train = '/home/godcedric/GitLocal/KDDCUP2017/result/'
+    path_test = '/home/godcedric/GitLocal/KDDCUP2017/result/'
 
 
     #训练数据转换
@@ -46,7 +45,6 @@ def main():
     #将原始数据转换成用于预测的车流量
     in_file_volume_t = 'volume(table 6)_test1'
     dt.avgVolume(in_file_volume_t, path_test_in, path_test_out)
-
 
 
     #训练数据抽取
