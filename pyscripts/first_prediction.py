@@ -90,28 +90,10 @@ def crosswise_predict():
     fw.close()
 
 
-def longitudinal_prediction():
-
-    # 读入纵向数据
-    longitudinal_raw_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/result/training_20min_hour_travel_time.csv')
-
-    # 测试数据
-    weather_raw_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/result/weather (table 7)_test1.csv')
-    weather_raw_data = weather_raw_data.set_index(['date', 'hour'])
-
-    # 输出
-    fw = open('/home/godcedric/GitLocal/KDDCUP2017/submission_result/travel_time_submission_longtudinal.csv', 'w')
-    fw.writelines(','.join(['"intersection_id"', '"tollgate_id"', '"time_window"', '"avg_travel_time"']) + '\n')
-
-
-
 def main():
 
     # 横向预测
-    #crosswise_predict()
-
-    # 纵向预测
-    longitudinal_prediction()
+    crosswise_predict()
 
 if __name__ == '__main__':
     main()

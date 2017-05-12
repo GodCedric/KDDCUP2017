@@ -24,6 +24,7 @@ def avgVolume(in_file):
 
     # Step 2: Create a dictionary to caculate and store volume per time window
     volumes = {}  # key: time window value: dictionary
+    etc = {}
     for i in range(len(vol_data)):
         each_pass = vol_data[i].replace('"', '').split(',')
         tollgate_id = each_pass[1]
@@ -36,30 +37,43 @@ def avgVolume(in_file):
         start_time_window = datetime(pass_time.year, pass_time.month, pass_time.day,
                                      pass_time.hour, time_window_minute, 0)
 
-        if start_time_window not in volumes:
-            volumes[start_time_window] = {}
-        if tollgate_id not in volumes[start_time_window]:
-            volumes[start_time_window][tollgate_id] = {}
-        if direction not in volumes[start_time_window][tollgate_id]:
-            volumes[start_time_window][tollgate_id][direction] = 1
+        if tollgate_id not in volumes:
+            volumes[tollgate_id] = {}
+        if direction not in volumes[tollgate_id]:
+            volumes[tollgate_id][direction] = {}
+        if start_time_window not in volumes[tollgate_id][direction]:
+            volumes[tollgate_id][direction][start_time_window] = 1
         else:
-            volumes[start_time_window][tollgate_id][direction] += 1
+            volumes[tollgate_id][direction][start_time_window] += 1
+
+        # 把etc加进去
+        has_etc = int(each_pass[4])
+        if tollgate_id not in etc:
+            etc[tollgate_id] = {}
+        if direction not in etc[tollgate_id]:
+            etc[tollgate_id][direction] = {}
+        if start_time_window not in etc[tollgate_id][direction]:
+            etc[tollgate_id][direction][start_time_window] = has_etc
+        else:
+            etc[tollgate_id][direction][start_time_window] += has_etc
+
 
     # Step 3: format output for tollgate and direction per time window
     fw = open(out_file_name, 'w')
-    fw.writelines(','.join(['"tollgate_id"', '"time_window"', '"direction"', '"volume"']) + '\n')
-    time_windows = list(volumes.keys())
-    time_windows.sort()
-    for time_window_start in time_windows:
-        time_window_end = time_window_start + timedelta(minutes=20)
-        for tollgate_id in volumes[time_window_start]:
-            for direction in volumes[time_window_start][tollgate_id]:
-               out_line = ','.join(['"' + str(tollgate_id) + '"', 
+    fw.writelines(','.join(['"tollgate_id"', '"time_window"', '"direction"', '"volume"', '"etc"']) + '\n')
+    for tollgate_id in volumes:
+        for direction in volumes[tollgate_id]:
+            time_window = list(volumes[tollgate_id][direction].keys())
+            time_window.sort()
+            for time_window_start in time_window:
+                time_window_end = time_window_start + timedelta(minutes=20)
+                out_line = ','.join(['"' + str(tollgate_id) + '"',
 			                     '"[' + str(time_window_start) + ',' + str(time_window_end) + ')"',
                                  '"' + str(direction) + '"',
-                                 '"' + str(volumes[time_window_start][tollgate_id][direction]) + '"',
+                                 '"' + str(volumes[tollgate_id][direction][time_window_start]) + '"',
+                                 '"' + str(etc[tollgate_id][direction][time_window_start]) + '"',
                                ]) + '\n'
-               fw.writelines(out_line)
+                fw.writelines(out_line)
     fw.close()
 
 def main():
