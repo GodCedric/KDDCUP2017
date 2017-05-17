@@ -57,15 +57,18 @@ def avg_volume_prediction(in_file):
     volumes2[3] = {0: {0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {}},
                    1: {0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {}}}
 
+    holiday = [date(2016,10,1),date(2016,10,2),date(2016,10,3),date(2016,10,4),date(2016,10,5),date(2016,10,6),date(2016,10,7)]
+
     for tm in volumes.keys():
-        if (tm.hour >= 8 and tm.hour<10) or (tm.hour>=17 and tm.hour<19):
-            for toid in volumes[tm]:
-                for dir in volumes[tm][toid]:
-                    vo = volumes[tm][toid][dir]
-                    if tm.time() not in volumes2[int(toid)][int(dir)][tm.weekday()].keys():
-                        volumes2[int(toid)][int(dir)][tm.weekday()][tm.time()] = [vo]
-                    else:
-                        volumes2[int(toid)][int(dir)][tm.weekday()][tm.time()].append(vo)
+        if tm.date not in holiday:
+            if (tm.hour >= 8 and tm.hour<10) or (tm.hour>=17 and tm.hour<19):
+                for toid in volumes[tm]:
+                    for dir in volumes[tm][toid]:
+                        vo = volumes[tm][toid][dir]
+                        if tm.time() not in volumes2[int(toid)][int(dir)][tm.weekday()].keys():
+                            volumes2[int(toid)][int(dir)][tm.weekday()][tm.time()] = [vo]
+                        else:
+                            volumes2[int(toid)][int(dir)][tm.weekday()][tm.time()].append(vo)
 
 
     # 步骤4：计算平均流量并输出

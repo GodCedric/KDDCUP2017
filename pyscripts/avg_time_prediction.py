@@ -22,7 +22,6 @@ def avg_time_prediction(in_file):
     fr.readline()  # skip the header
     traj_data = fr.readlines()
     fr.close()
-    print(traj_data[0])
 
     # 步骤2：读取平均时间数据，按照星期几分割开
     travel_times = {}  # {A2到C3：{周一到周七:{时间段，[平均时间列表]}}}
