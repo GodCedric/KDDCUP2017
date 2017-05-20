@@ -8,6 +8,7 @@ import math
 from datetime import datetime,timedelta
 
 file_suffix = '.csv'
+#path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/training/'
 path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/testing_phase1/'  # set the data directory
 
 def avgVolume(in_file):
@@ -15,6 +16,8 @@ def avgVolume(in_file):
     out_suffix = '_20min_avg_volume'
     in_file_name = in_file + file_suffix
     out_file_name = in_file.split('_')[1] + out_suffix + file_suffix
+    out_file_path = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/初始形成时间窗的数据集/'
+    out_file_name = out_file_path + out_file_name
 
     # Step 1: Load volume data
     fr = open(path + in_file_name, 'r')
@@ -78,6 +81,7 @@ def avgVolume(in_file):
 
 def main():
 
+    #in_file = 'volume(table 6)_training'
     in_file = 'volume(table 6)_test1'
     avgVolume(in_file)
 

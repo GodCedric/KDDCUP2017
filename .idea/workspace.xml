@@ -2,9 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0904e23d-00eb-4e26-8604-8a2523714f1e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/full_time.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/xgboost_predict.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/data_clean.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/data_feature_engineering.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pyscripts/Data_format.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pyscripts/Data_transform.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pyscripts/Feature_Engineering.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pyscripts/avg_time_submission.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pyscripts/avg_volume_submission.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pyscripts/first_prediction.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pyscripts/test1_20min_avg_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pyscripts/training_20min_avg_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pyscripts/travel_time_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pyscripts/volume_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/avg_speed_all_route_and_last_link.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/route_length.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/test1_20min_avg_travel_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/test1_20min_avg_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/training_20min_avg_travel_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/training_20min_avg_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/training_20min_date_travel_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/training_20min_hour_travel_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/travel_time_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/travel_time_raw_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/volume_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/volume_raw_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/weather (table 7)_test1.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/weather (table 7)_training_update.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/含前6小时窗口/以均值填充缺失值的训练集及测试集/test_travel_time_feature_meanfill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/含前6小时窗口/以均值填充缺失值的训练集及测试集/test_volume_feature_meanfill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/含前6小时窗口/以均值填充缺失值的训练集及测试集/travel_time_data_meanfill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/含前6小时窗口/以均值填充缺失值的训练集及测试集/volume_data_meanfill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/含前6小时窗口/以最近值填充缺失值的训练集及测试集/test_travel_time_feature_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/含前6小时窗口/以最近值填充缺失值的训练集及测试集/test_volume_feature_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/含前6小时窗口/以最近值填充缺失值的训练集及测试集/travel_time_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/含前6小时窗口/以最近值填充缺失值的训练集及测试集/volume_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/含前6小时窗口/缺失值未处理的训练集及测试集/test_travel_time_feature_nofill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/含前6小时窗口/缺失值未处理的训练集及测试集/test_volume_feature_nofill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/含前6小时窗口/缺失值未处理的训练集及测试集/travel_time_data_nofill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/含前6小时窗口/缺失值未处理的训练集及测试集/volume_data_nofill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/数据生成文件/KDD_data_clean.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/数据生成文件/KDD_data_extract.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/数据生成文件/KDD_feature_engineering.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/数据生成文件/KDD_testdata_ectract.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/数据生成文件/full_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/数据生成文件/full_time2.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/数据生成文件/travel_time_raw_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/数据生成文件/travel_time_raw_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/数据生成文件/volume_raw_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/数据生成文件/volume_raw_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/训练集测试集全时间段补充数据/readme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/训练集测试集全时间段补充数据/test_travel_time_feature.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/训练集测试集全时间段补充数据/test_volume_feature.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/训练集测试集全时间段补充数据/travel_time_before2hours.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/训练集测试集全时间段补充数据/travel_time_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/训练集测试集全时间段补充数据/volume_before2hour2.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/数据集生成/训练集测试集全时间段补充数据/volume_data_ffill.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/aggregate_travel_time.py" afterPath="$PROJECT_DIR$/pyscripts/aggregate_travel_time.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/aggregate_volume.py" afterPath="$PROJECT_DIR$/pyscripts/aggregate_volume.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/data_extract.py" afterPath="$PROJECT_DIR$/pyscripts/data_extract.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/test.py" afterPath="$PROJECT_DIR$/pyscripts/test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,12 +79,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="full_time.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pyscripts/full_time.py">
+      <file leaf-file-name="data_extract.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyscripts/data_extract.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="83" column="47" lean-forward="false" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="98">
+              <caret line="479" column="0" lean-forward="false" selection-start-line="479" selection-start-column="0" selection-end-line="492" selection-end-column="10" />
+              <folding>
+                <element signature="e#66#84#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data_clean.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyscripts/data_clean.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="123" column="10" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="129" selection-end-column="10" />
+              <folding>
+                <element signature="e#61#79#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data_feature_engineering.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pyscripts/data_feature_engineering.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="164" column="0" lean-forward="true" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+              <folding>
+                <element signature="e#60#78#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,22 +141,25 @@
         <option value="$PROJECT_DIR$/pyscripts/Data_transform.py" />
         <option value="$PROJECT_DIR$/pyscripts/Data_format.py" />
         <option value="$PROJECT_DIR$/pyscripts/Feature_Engineering.py" />
-        <option value="$PROJECT_DIR$/pyscripts/test.py" />
         <option value="$PROJECT_DIR$/pyscripts/first_prediction.py" />
-        <option value="$PROJECT_DIR$/pyscripts/data_extract.py" />
-        <option value="$PROJECT_DIR$/pyscripts/aggregate_volume.py" />
         <option value="$PROJECT_DIR$/pyscripts/avg_time_prediction.py" />
         <option value="$PROJECT_DIR$/pyscripts/avg_volume_prediction.py" />
         <option value="$PROJECT_DIR$/pyscripts/xgboost_predict.py" />
         <option value="$PROJECT_DIR$/pyscripts/full_time.py" />
+        <option value="$PROJECT_DIR$/pyscripts/test.py" />
+        <option value="$PROJECT_DIR$/pyscripts/aggregate_travel_time.py" />
+        <option value="$PROJECT_DIR$/pyscripts/aggregate_volume.py" />
+        <option value="$PROJECT_DIR$/pyscripts/data_extract.py" />
+        <option value="$PROJECT_DIR$/pyscripts/data_clean.py" />
+        <option value="$PROJECT_DIR$/pyscripts/data_feature_engineering.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="186" />
-    <option name="y" value="131" />
-    <option name="width" value="1180" />
-    <option name="height" value="637" />
+    <option name="x" value="413" />
+    <option name="y" value="100" />
+    <option name="width" value="1301" />
+    <option name="height" value="674" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -93,8 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -123,14 +207,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Learn_Machine_Learning" />
   </component>
-  <component name="RunManager" selected="Python.full_time">
-    <configuration default="false" name="data_extract" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.data_feature_engineering">
+    <configuration default="false" name="aggregate_travel_time" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -142,7 +228,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="KDDCUP2017" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/data_extract.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/aggregate_travel_time.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -164,7 +250,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="avg_time_prediction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="data_extract" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -176,12 +262,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="KDDCUP2017" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/avg_time_prediction.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/data_extract.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="avg_volume_prediction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="data_clean" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -193,12 +279,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="KDDCUP2017" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/avg_volume_prediction.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/data_clean.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="full_time" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="data_feature_engineering" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -210,7 +296,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="KDDCUP2017" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/full_time.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/data_feature_engineering.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -350,19 +436,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.data_extract" />
+      <item index="0" class="java.lang.String" itemvalue="Python.aggregate_travel_time" />
       <item index="1" class="java.lang.String" itemvalue="Python.aggregate_volume" />
-      <item index="2" class="java.lang.String" itemvalue="Python.avg_time_prediction" />
-      <item index="3" class="java.lang.String" itemvalue="Python.avg_volume_prediction" />
-      <item index="4" class="java.lang.String" itemvalue="Python.full_time" />
+      <item index="2" class="java.lang.String" itemvalue="Python.data_extract" />
+      <item index="3" class="java.lang.String" itemvalue="Python.data_clean" />
+      <item index="4" class="java.lang.String" itemvalue="Python.data_feature_engineering" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.full_time" />
-        <item index="1" class="java.lang.String" itemvalue="Python.avg_volume_prediction" />
-        <item index="2" class="java.lang.String" itemvalue="Python.avg_time_prediction" />
+        <item index="0" class="java.lang.String" itemvalue="Python.data_feature_engineering" />
+        <item index="1" class="java.lang.String" itemvalue="Python.data_clean" />
+        <item index="2" class="java.lang.String" itemvalue="Python.data_extract" />
         <item index="3" class="java.lang.String" itemvalue="Python.aggregate_volume" />
-        <item index="4" class="java.lang.String" itemvalue="Python.data_extract" />
+        <item index="4" class="java.lang.String" itemvalue="Python.aggregate_travel_time" />
       </list>
     </recent_temporary>
   </component>
@@ -380,19 +466,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="186" y="131" width="1180" height="637" extended-state="0" />
+    <frame x="413" y="100" width="1301" height="674" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20084746" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22136818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="119" y="304" width="1194" height="233" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31850535" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19532554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3623311" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2406577" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="65" y="386" width="1301" height="232" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3639399" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="65" y="386" width="1301" height="232" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -409,19 +495,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pyscripts/Feature_Engineering.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pyscripts/data_extract.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pyscripts/data_extract.py</url>
-          <line>64</line>
-          <option name="timeStamp" value="77" />
+          <url>file://$PROJECT_DIR$/pyscripts/test.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="93" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -434,7 +510,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="84" />
+      <option name="time" value="94" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -443,71 +519,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pyscripts/Feature_Engineering.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/Data_transform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2397">
-          <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/Data_format.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/avg_time_prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="65" lean-forward="true" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/avg_volume_prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/Feature_Engineering.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/Data_transform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2737">
-          <caret line="161" column="41" lean-forward="false" selection-start-line="161" selection-start-column="41" selection-end-line="161" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/Data_format.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6681">
-          <caret line="393" column="13" lean-forward="false" selection-start-line="393" selection-start-column="13" selection-end-line="393" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/avg_time_prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="49" column="48" lean-forward="false" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pyscripts/avg_time_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -596,20 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="23" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pyscripts/Data_format.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -633,23 +630,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/KDD_data_analyze.ipynb" />
-    <entry file="file://$PROJECT_DIR$/pyscripts/data_extract.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="99" column="4" lean-forward="false" selection-start-line="99" selection-start-column="4" selection-end-line="100" selection-end-column="42" />
-          <folding>
-            <element signature="e#64#82#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/first_prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pyscripts/avg_volume_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -671,26 +651,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/aggregate_travel_time.py">
+    <entry file="file://$PROJECT_DIR$/pyscripts/full_time.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        <state relative-caret-position="415">
+          <caret line="83" column="47" lean-forward="false" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pandas/core/groupby.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="2461" column="0" lean-forward="false" selection-start-line="2461" selection-start-column="0" selection-end-line="2461" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pandas/core/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="453" column="0" lean-forward="false" selection-start-line="453" selection-start-column="0" selection-end-line="453" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="2065" column="0" lean-forward="false" selection-start-line="2065" selection-start-column="0" selection-end-line="2065" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pandas/types/missing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pandas/indexes/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="2133" column="0" lean-forward="false" selection-start-line="2133" selection-start-column="0" selection-end-line="2133" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pandas/core/internals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="326" column="0" lean-forward="false" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pandas/core/generic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="1385" column="0" lean-forward="false" selection-start-line="1385" selection-start-column="0" selection-end-line="1385" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/first_prediction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pyscripts/aggregate_volume.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="74" selection-end-column="40" />
+        <state relative-caret-position="260">
+          <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/full_time.py">
+    <entry file="file://$PROJECT_DIR$/pyscripts/aggregate_travel_time.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="83" column="47" lean-forward="false" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="850">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding>
+            <element signature="e#161#172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/data_extract.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="479" column="0" lean-forward="false" selection-start-line="479" selection-start-column="0" selection-end-line="492" selection-end-column="10" />
+          <folding>
+            <element signature="e#66#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/data_clean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="123" column="10" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="129" selection-end-column="10" />
+          <folding>
+            <element signature="e#61#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/data_feature_engineering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="164" column="0" lean-forward="true" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+          <folding>
+            <element signature="e#60#78#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
