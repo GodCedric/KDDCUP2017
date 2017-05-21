@@ -6,6 +6,7 @@
 """
 import numpy as np
 import pandas as pd
+from datetime import datetime,timedelta,date,time
 from sklearn import preprocessing
 
 def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time_infile, test_volumn_infile):
@@ -16,41 +17,41 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
     test_volume_data = pd.read_csv(test_volumn_infile)
 
     # 删除一些列
-    del travel_time_data['time_window']
-    del travel_time_data['start_time']
+    #del travel_time_data['time_window']
+    #del travel_time_data['start_time']
     del travel_time_data['sea_pressure']
-    del travel_time_data['date']
-    del travel_time_data['time']
+    #del travel_time_data['date']
+    #del travel_time_data['time']
     del travel_time_data['holiday']
-    del volume_data['time_window']
+    #del volume_data['time_window']
     del volume_data['etc']
-    del volume_data['start_time']
-    del volume_data['date']
+    #del volume_data['start_time']
+    #del volume_data['date']
     del volume_data['hour']
     del volume_data['sea_pressure']
-    del volume_data['time']
-    del test_travel_time_data['time_window']
-    del test_travel_time_data['start_time']
+    #del volume_data['time']
+    #del test_travel_time_data['time_window']
+    #del test_travel_time_data['start_time']
     del test_travel_time_data['sea_pressure']
-    del test_travel_time_data['date']
-    del test_travel_time_data['time']
-    del test_volume_data['time_window']
-    del test_volume_data['start_time']
-    del test_volume_data['date']
+    #del test_travel_time_data['date']
+    #del test_travel_time_data['time']
+    #del test_volume_data['time_window']
+    #del test_volume_data['start_time']
+    #del test_volume_data['date']
     del test_volume_data['sea_pressure']
-    del test_volume_data['time']
+    #del test_volume_data['time']
 
     # 列排序
-    time_columns = ['avg_travel_time', 'route', 'intersection_id', 'tollgate_id', 'weekday', 'timemap', 'pressure',
+    time_columns = ['avg_travel_time', 'route', 'intersection_id', 'tollgate_id', 'time_window', 'start_time', 'date', 'time','weekday', 'timemap', 'pressure',
                     'wind_direction', 'wind_speed', 'temperature', 'rel_humidity', 'precipitation', 'last_20min',
                     'last_40min', 'last_60min', 'last_80min', 'last_100min', 'last_120min']
-    time_columns2 = ['route', 'intersection_id', 'tollgate_id', 'weekday', 'timemap', 'pressure', 'wind_direction',
+    time_columns2 = ['route', 'intersection_id', 'tollgate_id', 'time_window', 'start_time', 'date', 'time', 'weekday', 'timemap', 'pressure', 'wind_direction',
                      'wind_speed', 'temperature', 'rel_humidity', 'precipitation', 'last_20min', 'last_40min',
                      'last_60min', 'last_80min', 'last_100min', 'last_120min']
-    volume_columns = ['volume', 'pair', 'tollgate_id', 'direction', 'weekday', 'timemap', 'pressure', 'wind_direction',
+    volume_columns = ['volume', 'pair', 'tollgate_id', 'direction', 'time_window', 'start_time', 'date', 'time', 'weekday', 'timemap', 'pressure', 'wind_direction',
                       'wind_speed', 'temperature', 'rel_humidity', 'precipitation', 'last_20min', 'last_40min',
                       'last_60min', 'last_80min', 'last_100min', 'last_120min']
-    volume_columns2 = ['pair', 'tollgate_id', 'direction', 'weekday', 'timemap', 'pressure', 'wind_direction',
+    volume_columns2 = ['pair', 'tollgate_id', 'direction', 'time_window', 'start_time', 'date', 'time', 'weekday', 'timemap', 'pressure', 'wind_direction',
                        'wind_speed', 'temperature', 'rel_humidity', 'precipitation', 'last_20min', 'last_40min',
                        'last_60min', 'last_80min', 'last_100min', 'last_120min']
     travel_time_data = pd.DataFrame(travel_time_data, columns=time_columns)
@@ -58,16 +59,24 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
     test_travel_time_data = pd.DataFrame(test_travel_time_data, columns=time_columns2)
     test_volume_data = pd.DataFrame(test_volume_data, columns=volume_columns2)
 
-    # 风向（映射成东北风，东南风，西南风，西北风）
+    # 风向（映射成东风，西风，南风，北风，东北风，东南风，西南风，西北风）
     def wind_direction_map(x):
-        if 0 < x <= 90:
+        if 22.5 < x <= 67.5:
             return 1
-        elif 90 < x <= 180:
+        elif 67.5 < x <= 112.5:
             return 2
-        elif 180 < x <= 270:
+        elif 112.5 < x <= 157.5:
             return 3
-        elif 270 < x <= 360:
+        elif 157.5 < x <= 202.5:
             return 4
+        elif 202.5 < x <= 247.5:
+            return 5
+        elif 247.5 < x <= 292.5:
+            return 6
+        elif 292.5 < x <= 337.5:
+            return 7
+        else:
+            return 8
 
     travel_time_data['wind_direction2'] = travel_time_data['wind_direction'].map(wind_direction_map)
     volume_data['wind_direction2'] = volume_data['wind_direction'].map(wind_direction_map)
@@ -99,10 +108,10 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
         else:
             return 9
 
-    travel_time_data['wind_speed2'] = travel_time_data['wind_speed'].map(wind_direction_map)
-    volume_data['wind_speed2'] = volume_data['wind_speed'].map(wind_direction_map)
-    test_travel_time_data['wind_speed2'] = test_travel_time_data['wind_speed'].map(wind_direction_map)
-    test_volume_data['wind_speed2'] = test_volume_data['wind_speed'].map(wind_direction_map)
+    travel_time_data['wind_speed2'] = travel_time_data['wind_speed'].map(wind_speed_map)
+    volume_data['wind_speed2'] = volume_data['wind_speed'].map(wind_speed_map)
+    test_travel_time_data['wind_speed2'] = test_travel_time_data['wind_speed'].map(wind_speed_map)
+    test_volume_data['wind_speed2'] = test_volume_data['wind_speed'].map(wind_speed_map)
 
     # 雨量等级
     def precipitation_map(x):
@@ -119,10 +128,10 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
         else:
             return 5
 
-    travel_time_data['precipitation2'] = travel_time_data['precipitation'].map(wind_direction_map)
-    volume_data['precipitation2'] = volume_data['precipitation'].map(wind_direction_map)
-    test_travel_time_data['precipitation2'] = test_travel_time_data['precipitation'].map(wind_direction_map)
-    test_volume_data['precipitation2'] = test_volume_data['precipitation'].map(wind_direction_map)
+    travel_time_data['precipitation2'] = travel_time_data['precipitation'].map(precipitation_map)
+    volume_data['precipitation2'] = volume_data['precipitation'].map(precipitation_map)
+    test_travel_time_data['precipitation2'] = test_travel_time_data['precipitation'].map(precipitation_map)
+    test_volume_data['precipitation2'] = test_volume_data['precipitation'].map(precipitation_map)
 
     # 增加人体舒适指数
     travel_time_data['SSD'] = (1.818 * travel_time_data['temperature'] + 18.18) * (0.88 + 0.002 * travel_time_data['rel_humidity']) + (travel_time_data['temperature'] - 32) / (45 - travel_time_data['temperature']) - 3.2 * travel_time_data['wind_speed'] + 18.2
@@ -150,16 +159,60 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
         else:
             return -4  # 寒冷
 
-    travel_time_data['SSD_level'] = travel_time_data['SSD'].map(wind_direction_map)
-    volume_data['SSD_level'] = volume_data['SSD'].map(wind_direction_map)
-    test_travel_time_data['SSD_level'] = test_travel_time_data['SSD'].map(wind_direction_map)
-    test_volume_data['SSD_level'] = test_volume_data['SSD'].map(wind_direction_map)
+    travel_time_data['SSD_level'] = travel_time_data['SSD'].map(SSD_map)
+    volume_data['SSD_level'] = volume_data['SSD'].map(SSD_map)
+    test_travel_time_data['SSD_level'] = test_travel_time_data['SSD'].map(SSD_map)
+    test_volume_data['SSD_level'] = test_volume_data['SSD'].map(SSD_map)
+
+    # 星期几映射成workday（工作日为1，周末为2，节假日为3）
+    holiday = ['2016-09-15', '2016-09-16', '2016-09-17', '2016-10-01', '2016-10-02', '2016-10-03', '2016-10-04',
+               '2016-10-05', '2016-10-06', '2016-10-07']
+
+    def ff(x):
+        if x in holiday:
+            return 3
+        else:
+            format_time = datetime.strptime(x, '%Y-%m-%d')
+            weekday = format_time.weekday()
+            if (weekday == 5 or weekday == 6):
+                return 2
+            else:
+                return 1
+
+    travel_time_data['is_workday'] = travel_time_data['date'].map(ff)
+    volume_data['is_workday'] = volume_data['date'].map(ff)
+    test_travel_time_data['is_workday'] = test_travel_time_data['date'].map(ff)
+    test_volume_data['is_workday'] = test_volume_data['date'].map(ff)
+
+    # pressure取整
+    travel_time_data['pressure'] = travel_time_data['pressure'].map(lambda x: round(x))
+    volume_data['pressure'] = volume_data['pressure'].map(lambda x: round(x))
+    test_travel_time_data['pressure'] = test_travel_time_data['pressure'].map(lambda x: round(x))
+    test_volume_data['pressure'] = test_volume_data['pressure'].map(lambda x: round(x))
+
+    # 增加datemap特征
+    travel_time_data['datetemp'] = travel_time_data['date'].map(lambda x: datetime.strptime(x, '%Y-%m-%d'))
+    volume_data['datetemp'] = volume_data['date'].map(lambda x: datetime.strptime(x, '%Y-%m-%d'))
+    test_travel_time_data['datetemp'] = test_travel_time_data['date'].map(lambda x: datetime.strptime(x, '%Y-%m-%d'))
+    test_volume_data['datetemp'] = test_volume_data['date'].map(lambda x: datetime.strptime(x, '%Y-%m-%d'))
+
+    start_time1 = datetime(2016, 7, 18, 0, 0, 0)
+    start_time2 = datetime(2016, 9, 18, 0, 0, 0)
+    start_time3 = datetime(2016, 10, 17, 0, 0, 0)
+    travel_time_data['datemap'] = travel_time_data['datetemp'].map(lambda x: int((x - start_time1).days))
+    volume_data['datemap'] = volume_data['datetemp'].map(lambda x: int((x - start_time2).days))
+    test_travel_time_data['datemap'] = test_travel_time_data['datetemp'].map(lambda x: int((x - start_time3).days))
+    test_volume_data['datemap'] = test_volume_data['datetemp'].map(lambda x: int((x - start_time3).days))
+    del travel_time_data['datetemp']
+    del volume_data['datetemp']
+    del test_travel_time_data['datetemp']
+    del test_volume_data['datetemp']
 
     # 写出数据
-    travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/2.0/以最近值填充的/travel_time_train_data.csv')
-    volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/2.0/以最近值填充的/volume_train_data.csv')
-    test_travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/2.0/以最近值填充的/test_travel_time_data.csv')
-    test_volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/2.0/以最近值填充的/test_volume_data.csv')
+    travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/2.0/以最近值填充的/travel_time_train_data.csv', index=False)
+    volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/2.0/以最近值填充的/volume_train_data.csv', index=False)
+    test_travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/2.0/以最近值填充的/test_travel_time_data.csv', index=False)
+    test_volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/2.0/以最近值填充的/test_volume_data.csv', index=False)
 
 
 

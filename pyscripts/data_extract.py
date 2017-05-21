@@ -71,11 +71,12 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
         alltemp = [temp1, temp2, temp3, temp4, temp5, temp6, temp7, temp8]
         alltemp = pd.DataFrame(alltemp)
         weather_data = pd.concat([weather_data, alltemp])
-    weather_data.sort('start_time')
 
     process_data = pd.merge(raw_data, weather_data, on='start_time', how='left')
     del process_data['hour']
     process_data['time'] = process_data['start_time'].map(lambda x: x.time())
+    # 天气缺失补充
+    process_data.fillna(method='ffill', inplace=True)
 
     # 增加路线和星期几两列
     process_data['weekday'] = process_data['start_time'].map(lambda x: x.weekday())
@@ -174,6 +175,8 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     raw_data2['start_time'] = raw_data2['time_window'].map(lambda x: datetime.strptime(x.split(',')[0][1:],'%Y-%m-%d %H:%M:%S'))
     raw_data2['pair'] = raw_data2['tollgate_id'].astype(str) + '-' + raw_data2['direction'].astype(str)
     process_data2 = pd.merge(raw_data2, weather_data, on='start_time', how='left')
+    # 天气缺失补充
+    process_data2.fillna(method='ffill', inplace=True)
 
     # 增加星期几和时间窗口两列
     process_data2['weekday'] = process_data2['start_time'].map(lambda x: x.weekday())
@@ -269,7 +272,7 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
 
     # start_time
     del test_travel_time['avg_travel_time']
-    test_travel_time['start_time'] = test_travel_time['time_window'].map(lambda x: datetime.strptime(x.split(',')[0][1:], '%Y-%m-%d %H:%M:%S') - timedelta(hours=2))
+    test_travel_time['start_time'] = test_travel_time['time_window'].map(lambda x: datetime.strptime(x.split(',')[0][1:], '%Y-%m-%d %H:%M:%S'))
 
     # 天气特征
     weather_data['hour'] = weather_data['hour'].map(lambda x: ' ' + time(x, 0, 0).strftime('%H:%M:%S'))
