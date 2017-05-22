@@ -11,8 +11,6 @@ import numpy as np
 import pandas as pd
 from datetime import datetime,timedelta,date,time
 
-# 记录时间
-start_tiem = time()
 
 # 录入数据
 travel_time_train_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/2.0/以最近值填充的/travel_time_train_data.csv')
