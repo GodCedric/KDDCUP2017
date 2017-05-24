@@ -27,7 +27,7 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
     del volume_data['etc']
     #del volume_data['start_time']
     #del volume_data['date']
-    del volume_data['hour']
+    #del volume_data['hour']
     del volume_data['sea_pressure']
     #del volume_data['time']
     #del test_travel_time_data['time_window']
@@ -42,16 +42,16 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
     #del test_volume_data['time']
 
     # 列排序
-    time_columns = ['avg_travel_time', 'route', 'intersection_id', 'tollgate_id', 'time_window', 'start_time', 'date', 'time','weekday', 'timemap', 'pressure',
+    time_columns = ['avg_travel_time', 'route', 'intersection_id', 'tollgate_id', 'time_window', 'start_time', 'date', 'time', 'hour', 'minute', 'weekday', 'timemap', 'pressure',
                     'wind_direction', 'wind_speed', 'temperature', 'rel_humidity', 'precipitation', 'last_20min',
                     'last_40min', 'last_60min', 'last_80min', 'last_100min', 'last_120min']
-    time_columns2 = ['route', 'intersection_id', 'tollgate_id', 'time_window', 'start_time', 'date', 'time', 'weekday', 'timemap', 'pressure', 'wind_direction',
+    time_columns2 = ['route', 'intersection_id', 'tollgate_id', 'time_window', 'start_time', 'date', 'time', 'hour', 'minute', 'weekday', 'timemap', 'pressure', 'wind_direction',
                      'wind_speed', 'temperature', 'rel_humidity', 'precipitation', 'last_20min', 'last_40min',
                      'last_60min', 'last_80min', 'last_100min', 'last_120min']
-    volume_columns = ['volume', 'pair', 'tollgate_id', 'direction', 'time_window', 'start_time', 'date', 'time', 'weekday', 'timemap', 'pressure', 'wind_direction',
+    volume_columns = ['volume', 'pair', 'tollgate_id', 'direction', 'time_window', 'start_time', 'date', 'time', 'hour', 'minute', 'weekday', 'timemap', 'pressure', 'wind_direction',
                       'wind_speed', 'temperature', 'rel_humidity', 'precipitation', 'last_20min', 'last_40min',
                       'last_60min', 'last_80min', 'last_100min', 'last_120min']
-    volume_columns2 = ['pair', 'tollgate_id', 'direction', 'time_window', 'start_time', 'date', 'time', 'weekday', 'timemap', 'pressure', 'wind_direction',
+    volume_columns2 = ['pair', 'tollgate_id', 'direction', 'time_window', 'start_time', 'date', 'time', 'hour', 'minute', 'weekday', 'timemap', 'pressure', 'wind_direction',
                        'wind_speed', 'temperature', 'rel_humidity', 'precipitation', 'last_20min', 'last_40min',
                        'last_60min', 'last_80min', 'last_100min', 'last_120min']
     travel_time_data = pd.DataFrame(travel_time_data, columns=time_columns)
@@ -208,11 +208,90 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
     del test_travel_time_data['datetemp']
     del test_volume_data['datetemp']
 
+    # 增加路径信息
+    road = pd.read_csv('road.csv')
+    travel_time_data = pd.merge(travel_time_data, road, on=['intersection_id', 'tollgate_id'], how='left')
+    test_travel_time_data = pd.merge(test_travel_time_data, road, on=['intersection_id', 'tollgate_id'], how='left')
+
+    # 离散特征独热编码
+    # 平均时间
+    route1 = travel_time_data.route
+    route2 = test_travel_time_data.route
+    route_all = pd.concat([route1, route2], axis=0)
+    route_onehot = pd.get_dummies(route_all)
+    travel_time_data = pd.concat([travel_time_data, route_onehot[:len(route1)]], axis=1)
+    test_travel_time_data = pd.concat([test_travel_time_data, route_onehot[len(route1):]], axis=1)
+
+    hour1 = travel_time_data.hour
+    hour2 = test_travel_time_data.hour
+    hour_all = pd.concat([hour1, hour2], axis=0)
+    hour_onehot = pd.get_dummies(hour_all, prefix='hour_')
+    travel_time_data = pd.concat([travel_time_data, hour_onehot[:len(hour1)]], axis=1)
+    test_travel_time_data = pd.concat([test_travel_time_data, hour_onehot[len(hour1):]], axis=1)
+
+    minute1 = travel_time_data.minute
+    minute2 = test_travel_time_data.minute
+    minute_all = pd.concat([minute1, minute2], axis=0)
+    minute_onehot = pd.get_dummies(minute_all, prefix='minute_')
+    travel_time_data = pd.concat([travel_time_data, minute_onehot[:len(minute1)]], axis=1)
+    test_travel_time_data = pd.concat([test_travel_time_data, minute_onehot[len(minute1):]], axis=1)
+
+    weekday1 = travel_time_data.weekday
+    weekday2 = test_travel_time_data.weekday
+    weekday_all = pd.concat([weekday1, weekday2], axis=0)
+    weekday_onehot = pd.get_dummies(weekday_all, prefix='weekday_')
+    travel_time_data = pd.concat([travel_time_data, weekday_onehot[:len(weekday1)]], axis=1)
+    test_travel_time_data = pd.concat([test_travel_time_data, weekday_onehot[len(weekday1):]], axis=1)
+
+    workday1 = travel_time_data.is_workday
+    workday2 = test_travel_time_data.is_workday
+    workday_all = pd.concat([workday1, workday2], axis=0)
+    workday_onehot = pd.get_dummies(workday_all, prefix='workday_')
+    travel_time_data = pd.concat([travel_time_data, workday_onehot[:len(workday1)]], axis=1)
+    test_travel_time_data = pd.concat([test_travel_time_data, workday_onehot[len(workday1):]], axis=1)
+
+    # 流量
+    pair1 = volume_data.pair
+    pair2 = test_volume_data.pair
+    pair_all = pd.concat([pair1, pair2], axis=0)
+    pair_onehot = pd.get_dummies(pair_all)
+    volume_data = pd.concat([volume_data, pair_onehot[:len(pair1)]], axis=1)
+    test_volume_data = pd.concat([test_volume_data, pair_onehot[len(pair1):]], axis=1)
+
+    hour1 = volume_data.hour
+    hour2 = test_volume_data.hour
+    hour_all = pd.concat([hour1, hour2], axis=0)
+    hour_onehot = pd.get_dummies(hour_all, prefix='hour_')
+    volume_data = pd.concat([volume_data, hour_onehot[:len(hour1)]], axis=1)
+    test_volume_data = pd.concat([test_volume_data, hour_onehot[len(hour1):]], axis=1)
+
+    minute1 = volume_data.minute
+    minute2 = test_volume_data.minute
+    minute_all = pd.concat([minute1, minute2], axis=0)
+    minute_onehot = pd.get_dummies(minute_all, prefix='minute_')
+    volume_data = pd.concat([volume_data, minute_onehot[:len(minute1)]], axis=1)
+    test_volume_data = pd.concat([test_volume_data, minute_onehot[len(minute1):]], axis=1)
+
+    weekday1 = volume_data.weekday
+    weekday2 = test_volume_data.weekday
+    weekday_all = pd.concat([weekday1, weekday2], axis=0)
+    weekday_onehot = pd.get_dummies(weekday_all, prefix='weekday_')
+    volume_data = pd.concat([volume_data, weekday_onehot[:len(weekday1)]], axis=1)
+    test_volume_data = pd.concat([test_volume_data, weekday_onehot[len(weekday1):]], axis=1)
+
+    workday1 = volume_data.is_workday
+    workday2 = test_volume_data.is_workday
+    workday_all = pd.concat([workday1, workday2], axis=0)
+    workday_onehot = pd.get_dummies(workday_all, prefix='workday_')
+    volume_data = pd.concat([volume_data, workday_onehot[:len(workday1)]], axis=1)
+    test_volume_data = pd.concat([test_volume_data, workday_onehot[len(workday1):]], axis=1)
+
+
     # 写出数据
-    travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/2.0/以最近值填充的/travel_time_train_data.csv', index=False)
-    volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/2.0/以最近值填充的/volume_train_data.csv', index=False)
-    test_travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/2.0/以最近值填充的/test_travel_time_data.csv', index=False)
-    test_volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/2.0/以最近值填充的/test_volume_data.csv', index=False)
+    travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/3.0/travel_time_train_data.csv', index=False)
+    volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/3.0/volume_train_data.csv', index=False)
+    test_travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/3.0/test_travel_time_data.csv', index=False)
+    test_volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/3.0/test_volume_data.csv', index=False)
 
 
 

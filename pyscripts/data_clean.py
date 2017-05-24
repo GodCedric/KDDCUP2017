@@ -18,6 +18,7 @@ def data_clean(travel_time_infile, volume_infile):
     #####-----平均时间-----#####
 
     # 异常样本删除（以平均时间3标准差原则删除异常样本）
+    """
     def ff(df, column='avg_travel_time'):
         travel_time = df['avg_travel_time']
         mean_value = travel_time.mean()
@@ -28,6 +29,15 @@ def data_clean(travel_time_infile, volume_infile):
         travel_time[travel_time > right] = np.nan
         df = df.dropna()
         return df
+    travel_time_data = travel_time_data.groupby('route').apply(ff)
+    """
+
+    def ff(df):
+        df = df.sort(['avg_travel_time'], ascending=False)
+        num_sample = len(df)
+        num_delete = round(0.05 * num_sample)
+        return df.iloc[num_delete:]
+
     travel_time_data = travel_time_data.groupby('route').apply(ff)
 
     # 风向异常值处理，以最近的风向值代替
@@ -78,12 +88,14 @@ def data_clean(travel_time_infile, volume_infile):
 
     #####-----流量-----#####
 
+    """
     # 删除节假日
     dropindex = volume_data[(volume_data['holiday'] == 1) & (volume_data['pair'] != '3-0')].index
     volume_data = volume_data.drop(dropindex, axis=0)
     dropindex = volume_data[(volume_data['pair'] == '1-0') & (volume_data['date'] == '2016-09-30')].index
     volume_data = volume_data.drop(dropindex, axis=0)
     del volume_data['holiday']
+    """
 
     # 风向异常值处理，以最近的风向值代替
     wind_direction = volume_data['wind_direction']

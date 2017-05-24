@@ -2,9 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0904e23d-00eb-4e26-8604-8a2523714f1e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/randomforest_predict.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/split_RF1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/split_and_prepare_train_data.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/split_xgboost.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pyscripts/randomforest_predict.py" afterPath="$PROJECT_DIR$/pyscripts/RF1.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pyscripts/xgboost_predict.py" afterPath="$PROJECT_DIR$/pyscripts/xgboost1.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/xgboost_predict.py" afterPath="$PROJECT_DIR$/pyscripts/xgboost_predict.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/data_clean.py" afterPath="$PROJECT_DIR$/pyscripts/data_clean.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/data_extract.py" afterPath="$PROJECT_DIR$/pyscripts/data_extract.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/data_feature_engineering.py" afterPath="$PROJECT_DIR$/pyscripts/data_feature_engineering.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submission_result/RF1.0/travel_time_submission.csv" afterPath="$PROJECT_DIR$/submission_result/RF1.0/travel_time_submission.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submission_result/xgboost1.0/travel_time_submission.csv" afterPath="$PROJECT_DIR$/submission_result/xgboost1.0/travel_time_submission.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submission_result/xgboost1.0/volume_submission.csv" afterPath="$PROJECT_DIR$/submission_result/xgboost1.0/volume_submission.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/加工过的数据集/2.0/以最近值填充的/travel_time_train_data.csv" afterPath="$PROJECT_DIR$/加工过的数据集/2.0/以最近值填充的/travel_time_train_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/待加工数据集/数据提取与合并/test_travel_time_feature_ffill.csv" afterPath="$PROJECT_DIR$/待加工数据集/数据提取与合并/test_travel_time_feature_ffill.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/待加工数据集/数据提取与合并/test_volume_feature_ffill.csv" afterPath="$PROJECT_DIR$/待加工数据集/数据提取与合并/test_volume_feature_ffill.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/待加工数据集/数据提取与合并/travel_time_raw_data.csv" afterPath="$PROJECT_DIR$/待加工数据集/数据提取与合并/travel_time_raw_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/待加工数据集/数据提取与合并/volume_raw_data.csv" afterPath="$PROJECT_DIR$/待加工数据集/数据提取与合并/volume_raw_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/待加工数据集/清洗过的数据/travel_time_clean_data_ffill.csv" afterPath="$PROJECT_DIR$/待加工数据集/清洗过的数据/travel_time_clean_data_ffill.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/待加工数据集/清洗过的数据/volume_clean_data_ffill.csv" afterPath="$PROJECT_DIR$/待加工数据集/清洗过的数据/volume_clean_data_ffill.csv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="xgboost_predict.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pyscripts/xgboost_predict.py">
+      <file leaf-file-name="xgboost1.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pyscripts/xgboost1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="21" />
+            <state relative-caret-position="187">
+              <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="108" selection-end-column="43" />
               <folding>
                 <element signature="e#101#122#0" expanded="true" />
               </folding>
@@ -34,13 +50,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="randomforest_predict.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pyscripts/randomforest_predict.py">
+      <file leaf-file-name="split_RF1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyscripts/split_RF1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="236">
+              <caret line="130" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
               <folding>
-                <element signature="e#107#157#0" expanded="true" />
+                <element signature="e#69#87#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="split_and_prepare_train_data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyscripts/split_and_prepare_train_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="68" column="41" lean-forward="false" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="41" />
+              <folding>
+                <element signature="e#67#85#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,19 +112,24 @@
         <option value="$PROJECT_DIR$/pyscripts/test.py" />
         <option value="$PROJECT_DIR$/pyscripts/aggregate_travel_time.py" />
         <option value="$PROJECT_DIR$/pyscripts/aggregate_volume.py" />
-        <option value="$PROJECT_DIR$/pyscripts/data_extract.py" />
-        <option value="$PROJECT_DIR$/pyscripts/data_clean.py" />
-        <option value="$PROJECT_DIR$/pyscripts/data_feature_engineering.py" />
-        <option value="$PROJECT_DIR$/pyscripts/xgboost_predict.py" />
         <option value="$PROJECT_DIR$/pyscripts/randomforest_predict.py" />
+        <option value="$PROJECT_DIR$/pyscripts/xgboost_predict.py" />
+        <option value="$PROJECT_DIR$/pyscripts/xgboost2.py" />
+        <option value="$PROJECT_DIR$/pyscripts/data_clean.py" />
+        <option value="$PROJECT_DIR$/pyscripts/data_extract.py" />
+        <option value="$PROJECT_DIR$/pyscripts/data_feature_engineering.py" />
+        <option value="$PROJECT_DIR$/pyscripts/xgboost1.py" />
+        <option value="$PROJECT_DIR$/pyscripts/split_and_prepare_train_data.py" />
+        <option value="$PROJECT_DIR$/pyscripts/split_RF1.py" />
+        <option value="$PROJECT_DIR$/pyscripts/split_xgboost.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="523" />
-    <option name="y" value="173" />
+    <option name="x" value="231" />
+    <option name="y" value="98" />
     <option name="width" value="1301" />
-    <option name="height" value="674" />
+    <option name="height" value="670" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -144,49 +177,15 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Learn_Machine_Learning" />
   </component>
-  <component name="RunManager" selected="Python.randomforest_predict">
-    <configuration default="false" name="data_extract" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyscripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="KDDCUP2017" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/data_extract.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="data_clean" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyscripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="KDDCUP2017" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/data_clean.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.split_RF1">
     <configuration default="false" name="data_feature_engineering" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -216,7 +215,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="KDDCUP2017" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/xgboost_predict.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/xgboost1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -233,7 +232,41 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="KDDCUP2017" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/randomforest_predict.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/RF1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="split_and_prepare_train_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyscripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KDDCUP2017" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/split_and_prepare_train_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="split_RF1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyscripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KDDCUP2017" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/split_RF1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -373,19 +406,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.data_extract" />
-      <item index="1" class="java.lang.String" itemvalue="Python.data_clean" />
-      <item index="2" class="java.lang.String" itemvalue="Python.data_feature_engineering" />
-      <item index="3" class="java.lang.String" itemvalue="Python.xgboost_predict" />
-      <item index="4" class="java.lang.String" itemvalue="Python.randomforest_predict" />
+      <item index="0" class="java.lang.String" itemvalue="Python.data_feature_engineering" />
+      <item index="1" class="java.lang.String" itemvalue="Python.xgboost_predict" />
+      <item index="2" class="java.lang.String" itemvalue="Python.randomforest_predict" />
+      <item index="3" class="java.lang.String" itemvalue="Python.split_and_prepare_train_data" />
+      <item index="4" class="java.lang.String" itemvalue="Python.split_RF1" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.randomforest_predict" />
-        <item index="1" class="java.lang.String" itemvalue="Python.xgboost_predict" />
-        <item index="2" class="java.lang.String" itemvalue="Python.data_feature_engineering" />
-        <item index="3" class="java.lang.String" itemvalue="Python.data_clean" />
-        <item index="4" class="java.lang.String" itemvalue="Python.data_extract" />
+        <item index="0" class="java.lang.String" itemvalue="Python.split_RF1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.split_and_prepare_train_data" />
+        <item index="2" class="java.lang.String" itemvalue="Python.xgboost_predict" />
+        <item index="3" class="java.lang.String" itemvalue="Python.randomforest_predict" />
+        <item index="4" class="java.lang.String" itemvalue="Python.data_feature_engineering" />
       </list>
     </recent_temporary>
   </component>
@@ -403,7 +436,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="523" y="173" width="1301" height="674" extended-state="0" />
+    <frame x="231" y="98" width="1301" height="670" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22136818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -411,7 +444,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="119" y="304" width="1194" height="233" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21702838" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2672269" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3623311" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -436,6 +469,11 @@
           <line>7</line>
           <option name="timeStamp" value="93" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pyscripts/xgboost1.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -447,7 +485,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="94" />
+      <option name="time" value="95" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -456,10 +494,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/aggregate_volume.py" />
-    <entry file="file://$PROJECT_DIR$/avg_volume_prediction.py" />
-    <entry file="file://$PROJECT_DIR$/aggregate_travel_time.py" />
-    <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/aggregate_volume.py" />
     <entry file="file://$PROJECT_DIR$/aggregate_travel_time.py" />
     <entry file="file://$PROJECT_DIR$/avg_time_prediction.py" />
@@ -541,13 +575,6 @@
     <entry file="file://$PROJECT_DIR$/pyscripts/Data_transform.py" />
     <entry file="file://$PROJECT_DIR$/pyscripts/Feature_Engineering.py" />
     <entry file="file://$PROJECT_DIR$/KDD_data_analyze.ipynb" />
-    <entry file="file://$PROJECT_DIR$/pyscripts/avg_volume_prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="63" column="35" lean-forward="false" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pyscripts/avg_time_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -603,6 +630,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="2133" column="0" lean-forward="false" selection-start-line="2133" selection-start-column="0" selection-end-line="2133" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -646,43 +674,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/data_clean.py">
+    <entry file="file://$PROJECT_DIR$/pyscripts/avg_volume_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="85" column="30" lean-forward="true" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/data_extract.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="165" selection-end-column="58" />
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pyscripts/data_feature_engineering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="199" column="45" lean-forward="true" selection-start-line="199" selection-start-column="45" selection-end-line="199" selection-end-column="45" />
+        <state relative-caret-position="153">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/xgboost_predict.py">
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/xgboost-0.6-py3.6.egg/xgboost/core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="21" />
+        <state relative-caret-position="-10">
+          <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/data_clean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/data_extract.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="435" column="26" lean-forward="false" selection-start-line="435" selection-start-column="26" selection-end-line="435" selection-end-column="26" />
           <folding>
-            <element signature="e#101#122#0" expanded="true" />
+            <element signature="e#66#84#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/randomforest_predict.py">
+    <entry file="file://$PROJECT_DIR$/pyscripts/split_and_prepare_train_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="68" column="41" lean-forward="false" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="41" />
+          <folding>
+            <element signature="e#67#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/RF1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
           <folding>
             <element signature="e#107#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/split_RF1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="130" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding>
+            <element signature="e#69#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/split_xgboost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="77" column="57" lean-forward="false" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
+          <folding>
+            <element signature="e#74#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/xgboost1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="108" selection-end-column="43" />
+          <folding>
+            <element signature="e#101#122#0" expanded="true" />
           </folding>
         </state>
       </provider>

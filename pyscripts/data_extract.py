@@ -78,8 +78,10 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     # 天气缺失补充
     process_data.fillna(method='ffill', inplace=True)
 
-    # 增加路线和星期几两列
+    # 增加路线和星期几，小时，分钟
     process_data['weekday'] = process_data['start_time'].map(lambda x: x.weekday())
+    process_data['hour'] = process_data['start_time'].map(lambda x: x.hour)
+    process_data['minute'] = process_data['start_time'].map(lambda x: x.minute)
     process_data['route'] = process_data['intersection_id'].astype(str) + '-' + process_data['tollgate_id'].astype(str)
 
     # 增加前2小时平均时间数据
@@ -181,6 +183,8 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     # 增加星期几和时间窗口两列
     process_data2['weekday'] = process_data2['start_time'].map(lambda x: x.weekday())
     process_data2['time'] = process_data2['start_time'].map(lambda x: x.time())
+    process_data2['hour'] = process_data2['start_time'].map(lambda x: x.hour)
+    process_data2['minute'] = process_data2['start_time'].map(lambda x: x.minute)
 
     # 增加前20分钟流量特征
     start_time = process_data2['start_time']
@@ -305,6 +309,8 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     test_travel_time = pd.merge(test_travel_time, weather_data, on='start_time', how='left')
     del test_travel_time['hour']
     test_travel_time['time'] = test_travel_time['start_time'].map(lambda x: x.time())
+    test_travel_time['hour'] = test_travel_time['start_time'].map(lambda x: x.hour)
+    test_travel_time['minute'] = test_travel_time['start_time'].map(lambda x: x.minute)
 
     # weekday特征
     test_travel_time['weekday'] = test_travel_time['start_time'].map(lambda x: x.weekday())
@@ -396,7 +402,6 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     # start_time特征
     test_volume['start_time'] = test_volume['time_window'].map(lambda x: datetime.strptime(x.split(',')[0][1:],'%Y-%m-%d %H:%M:%S'))
 
-
     test_volume = test_volume.sort(['tollgate_id', 'direction', 'start_time'])
     # pair特征
     test_volume['pair'] = test_volume['tollgate_id'].astype(str) + '-' + test_volume['direction'].astype(str)
@@ -412,6 +417,8 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
 
     del test_volume['hour']
     del test2['etc']
+    test_volume['hour'] = test_volume['start_time'].map(lambda x: x.hour)
+    test_volume['minute'] = test_volume['start_time'].map(lambda x: x.minute)
     # last_20min
     test2['start_time'] = test2['time_window'].map(lambda x: datetime.strptime(x.split(',')[0][1:], '%Y-%m-%d %H:%M:%S')+timedelta(hours=2))
     del test2['time_window']
