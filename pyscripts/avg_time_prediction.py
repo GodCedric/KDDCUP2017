@@ -13,7 +13,7 @@ path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/training/'  # set 
 
 def avg_time_prediction(in_file):
 
-    out_suffix = 'travel_time_green_timewindow_meanfill'
+    out_suffix = 'travel_time_red_timewindow_meanfill'
     in_file_name = in_file + file_suffix
     out_file_name = out_suffix + file_suffix
 
@@ -68,7 +68,7 @@ def avg_time_prediction(in_file):
         for wkday in travel_times[route].keys():
             route_time_windows = list(travel_times[route][wkday].keys())
             route_time_windows.sort()
-            result_time_windows = [rt for rt in route_time_windows if (rt.hour>=6 and rt.hour<8) or (rt.hour>=15 and rt.hour<17)]
+            result_time_windows = [rt for rt in route_time_windows if (rt.hour>=8 and rt.hour<10) or (rt.hour>=17 and rt.hour<19)]
             for time_window_start in result_time_windows:
                 tt_set = travel_times[route][wkday][time_window_start]
                 avg_tt = round(sum(tt_set) / float(len(tt_set)), 2)

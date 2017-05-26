@@ -13,7 +13,7 @@ path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/training/'  # set 
 
 def avg_volume_prediction(in_file):
 
-    out_suffix = 'volume_green_timewindow_meanfill'
+    out_suffix = 'volume_red_timewindow_meanfill'
     in_file_name = in_file + file_suffix
     out_file_name = out_suffix + file_suffix
 
@@ -61,7 +61,7 @@ def avg_volume_prediction(in_file):
 
     for tm in volumes.keys():
         if tm.date not in holiday:
-            if (tm.hour >= 6 and tm.hour<8) or (tm.hour>=15 and tm.hour<17):
+            if (tm.hour >= 8 and tm.hour<10) or (tm.hour>=17 and tm.hour<19):
                 for toid in volumes[tm]:
                     for dir in volumes[tm][toid]:
                         vo = volumes[tm][toid][dir]
