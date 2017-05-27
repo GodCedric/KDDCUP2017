@@ -80,7 +80,7 @@ V31_train_data = V31_train_data.drop(['volume'], axis=1)
 
 
 ### 参数设置
-rf_base1 = RandomForestRegressor(n_estimators = 110, max_depth = 6, oob_score = True, random_state = 10)
+rf_base1 = RandomForestRegressor(n_estimators = 90, max_depth = 6, oob_score = True, random_state = 10)
 
 
 ### 训练，预测
@@ -130,5 +130,5 @@ travel_time_submission['avg_travel_time'] = np.array(temp1.avg_travel_time)
 volume_submission['volume'] = np.array(temp2.volume)
 
 ### 输出
-travel_time_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/splitRF1.0/travel_time_submission.csv', index=False)
-volume_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/splitRF1.0/volume_submission.csv', index=False)
+travel_time_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/phase1.5/splitRF/travel_time_submission.csv', index=False)
+volume_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/phase1.5/splitRF/volume_submission.csv', index=False)
