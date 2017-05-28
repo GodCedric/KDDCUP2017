@@ -42,6 +42,7 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     raw_data2['volume'] = raw_data2.groupby(['tollgate_id', 'direction'])['volume'].apply(bfill)
     """
 
+    """
     # 填补10月10号的天气缺失数据
     # 10.10号的用10.09和10.11的平均
     date9_weather_data = weather_data[weather_data['date'] == '2016-10-09']
@@ -66,7 +67,7 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     weather_data = pd.concat([weather_data, date10_weather_data], axis=0)
 
     weather_data.index = np.arange(len(weather_data))
-
+    """
 
     # 整合平均时间与天气数据
     raw_data['start_time'] = raw_data['time_window'].map(lambda x: datetime.strptime(x.split(',')[0][1:], '%Y-%m-%d %H:%M:%S'))
@@ -113,6 +114,9 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     process_data['route'] = process_data['intersection_id'].astype(str) + '-' + process_data['tollgate_id'].astype(str)
 
     # 增加前2小时平均时间数据
+    process_data = process_data.sort_values(by=['intersection_id', 'tollgate_id', 'start_time'])
+    process_data.index = np.arange(len(process_data))
+
     start_time = process_data['start_time']
     avg_travel_time = process_data['avg_travel_time']
     last_20min = process_data['avg_travel_time'].copy()
@@ -196,7 +200,7 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     process_data['holiday'] = process_data['date'].map(ff)
 
     # 写出数据
-    process_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/数据提取与合并/travel_time_raw_data.csv', index=False)
+    process_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/提取数据/travel_time_raw_data.csv', index=False)
 
 
     #####**********提取流量数据**********#####
@@ -216,6 +220,9 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     process_data2['minute'] = process_data2['start_time'].map(lambda x: x.minute)
 
     # 增加前20分钟流量特征
+    process_data2 = process_data2.sort_values(by = ['tollgate_id', 'direction', 'start_time'])
+    process_data2.index = np.arange(len(process_data2))
+
     start_time = process_data2['start_time']
     volume = process_data2['volume']
     last_20min = process_data2['volume'].copy()
@@ -286,7 +293,7 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     process_data2['holiday'] = process_data2['date'].map(ff)
 
     # 写出数据
-    process_data2.to_csv('/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/数据提取与合并/volume_raw_data.csv', index=False)
+    process_data2.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/提取数据/volume_raw_data.csv', index=False)
 
 
   ###----------------测试集------------------###
@@ -300,8 +307,8 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     weather_data = pd.read_csv(test_weather_infile)
 
     # 测试特征集
-    test_travel_time = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_sample/submission_sample_travelTime.csv')
-    test_volume = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_sample/submission_sample_volume.csv')
+    test_travel_time = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/原始数据/submission_sample_travelTime.csv')
+    test_volume = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/原始数据/submission_sample_volume.csv')
 
     # start_time
     del test_travel_time['avg_travel_time']
@@ -337,6 +344,10 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
         alltemp = pd.DataFrame(alltemp)
         weather_data = pd.concat([weather_data, alltemp])
 
+
+    test_travel_time = test_travel_time.sort_values(by = ['intersection_id', 'tollgate_id', 'start_time'])
+    test_travel_time.index = np.arange(len(test_travel_time))
+
     test_travel_time = pd.merge(test_travel_time, weather_data, on='start_time', how='left')
     test_travel_time['date'] = test_travel_time['start_time'].map(lambda x: x.date())
     test_travel_time['time'] = test_travel_time['start_time'].map(lambda x: x.time())
@@ -363,8 +374,8 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     ffill = lambda g:g.fillna(method='ffill')
     bfill = lambda g:g.fillna(method='bfill')
 
-    test_for_last20min['last_20min'] = test_for_last20min.groupby(['route','time'])['avg_travel_time'].apply(ffill)
-    test_for_last20min['last_20min'] = test_for_last20min.groupby(['route','time'])['avg_travel_time'].apply(bfill)
+    test_for_last20min = test_for_last20min.groupby(['route', 'time']).apply(ffill)
+    test_for_last20min = test_for_last20min.groupby(['route', 'time']).apply(bfill)
 
     last_travel_time = test_for_last20min['avg_travel_time']
     last_20min = last_travel_time.copy()
@@ -424,7 +435,7 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     test_travel_time['timemap'] = test_travel_time['time'].map(lambda x:timedic[x])
 
     # 写出数据
-    test_travel_time.to_csv('/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/数据提取与合并/test_travel_time_feature_ffill.csv', index=False)
+    test_travel_time.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/提取数据/test_travel_time_feature_ffill.csv', index=False)
 
 
     #####**********流量**********#####
@@ -447,10 +458,15 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     test_volume['time'] = test_volume['start_time'].map(lambda x: x.time())
     test_volume['date'] = test_volume['start_time'].map(lambda x: x.date())
 
-    del test2['etc']
+    #del test2['etc']
     test_volume['hour'] = test_volume['start_time'].map(lambda x: x.hour)
     test_volume['minute'] = test_volume['start_time'].map(lambda x: x.minute)
     # last_20min
+
+
+    test_volume = test_volume.sort_values(by = ['tollgate_id', 'direction', 'start_time'])
+    test_volume.index = np.arange(len(test_volume))
+
     test2['start_time'] = test2['time_window'].map(lambda x: datetime.strptime(x.split(',')[0][1:], '%Y-%m-%d %H:%M:%S')+timedelta(hours=2))
     del test2['time_window']
     test2 = test2.sort(['tollgate_id','direction'])
@@ -515,17 +531,25 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     test_volume['timemap'] = test_volume['time'].map(lambda x:timedic[x])
 
     # 写出数据
-    test_volume.to_csv('/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/数据提取与合并/test_volume_feature_ffill.csv', index=False)
+    test_volume.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/提取数据/test_volume_feature_ffill.csv', index=False)
 
 
 def main():
 
-    travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/初始形成时间窗的数据集/training_20min_avg_travel_time.csv'
-    volume_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/初始形成时间窗的数据集/training_20min_avg_volume.csv'
-    weather_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/初始形成时间窗的数据集/weather (table 7)_training_update.csv'
-    test_travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/初始形成时间窗的数据集/test1_20min_avg_travel_time.csv'
-    test_volume_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/初始形成时间窗的数据集/test1_20min_avg_volume.csv'
-    test_weather_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/初始形成时间窗的数据集/weather (table 7)_test1.csv'
+    #travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/初始形成时间窗的数据集/training_20min_avg_travel_time.csv'
+    #volume_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/初始形成时间窗的数据集/training_20min_avg_volume.csv'
+    #weather_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/初始形成时间窗的数据集/weather (table 7)_training_update.csv'
+    #test_travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/初始形成时间窗的数据集/test1_20min_avg_travel_time.csv'
+    #test_volume_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/初始形成时间窗的数据集/test1_20min_avg_volume.csv'
+    #test_weather_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/初始形成时间窗的数据集/weather (table 7)_test1.csv'
+
+    travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/final_data/时间窗数据/train_20min_avg_travel_time.csv'
+    volume_infile = '/home/godcedric/GitLocal/KDDCUP2017/final_data/时间窗数据/train_20min_avg_volume.csv'
+    weather_infile = '/home/godcedric/GitLocal/KDDCUP2017/final_data/原始数据/weather_train.csv'
+    test_travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/final_data/时间窗数据/test_20min_avg_travel_time.csv'
+    test_volume_infile = '/home/godcedric/GitLocal/KDDCUP2017/final_data/时间窗数据/test_20min_avg_volume.csv'
+    test_weather_infile = '/home/godcedric/GitLocal/KDDCUP2017/final_data/原始数据/weather_test.csv'
+
 
     extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_time_infile, test_volume_infile, test_weather_infile)
 

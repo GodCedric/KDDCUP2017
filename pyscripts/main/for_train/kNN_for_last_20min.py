@@ -174,8 +174,8 @@ KNeighborsRegressor.fit(V31_train_data, V31_label)
 V31_test_data['volume'] = KNeighborsRegressor.predict(V31_test_data)
 
 # 整合
-travel_time_submission = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_sample/travel_time_submission.csv')
-volume_submission = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_sample/volume_submission.csv')
+travel_time_submission = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/原始数据/submission_sample_travelTime.csv')
+volume_submission = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/原始数据/submission_sample_volume.csv')
 
 temp1 = pd.concat([A2_test_data, A3_test_data, B1_test_data, B3_test_data, C1_test_data, C3_test_data], axis=0)
 temp2 = pd.concat([V10_test_data, V11_test_data, V20_test_data, V30_test_data, V31_test_data], axis=0)
@@ -184,35 +184,73 @@ travel_time_submission['avg_travel_time'] = np.array(temp1.avg_travel_time)
 volume_submission['volume'] = np.array(temp2.volume)
 
 # 输出
-travel_time_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/kNN1.0/travel_time_submission.csv', index=False)
-volume_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/kNN1.0/volume_submission.csv', index=False)
+#travel_time_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/kNN1.0/travel_time_submission.csv', index=False)
+#volume_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/kNN1.0/volume_submission.csv', index=False)
 
 
 ### kNN填充last_20min缺失值
-travel_time_test_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/3.0/test_travel_time_data.csv')
-volume_test_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/3.0/test_volume_data.csv')
+travel_time_test_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.0/test_travel_time_data.csv')
+volume_test_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.0/test_volume_data.csv')
 
 # 排好序
 travel_time_test_data['start_time'] = travel_time_test_data['time_window'].map(lambda x: datetime.strptime(x.split(',')[0][1:], '%Y-%m-%d %H:%M:%S'))
 volume_test_data['start_time'] = volume_test_data['time_window'].map(lambda x: datetime.strptime(x.split(',')[0][1:], '%Y-%m-%d %H:%M:%S'))
 travel_time_test_data = travel_time_test_data.sort_values(by = ['intersection_id', 'tollgate_id', 'start_time'])
+travel_time_test_data.index = np.arange(len(travel_time_test_data))
 del travel_time_test_data['start_time']
 volume_test_data = volume_test_data.sort_values(by = ['tollgate_id', 'direction', 'start_time'])
+volume_test_data.index = np.arange(len(volume_test_data))
 del volume_test_data['start_time']
 
 # 填充值
 time_target = travel_time_submission['avg_travel_time'].values
 travel_time_test_data = travel_time_test_data.set_index(np.arange(len(travel_time_test_data)))
 for i in range(len(travel_time_test_data)):
-    if i % 6 != 0:
+    if i % 6 == 1:
         travel_time_test_data['last_20min'][i] = time_target[i-1]
+    if i % 6 == 2:
+        travel_time_test_data['last_20min'][i] = time_target[i-1]
+        travel_time_test_data['last_40min'][i] = time_target[i-2]
+    if i % 6 == 3:
+        travel_time_test_data['last_20min'][i] = time_target[i-1]
+        travel_time_test_data['last_40min'][i] = time_target[i-2]
+        travel_time_test_data['last_60min'][i] = time_target[i-3]
+    if i % 6 == 4:
+        travel_time_test_data['last_20min'][i] = time_target[i-1]
+        travel_time_test_data['last_40min'][i] = time_target[i-2]
+        travel_time_test_data['last_60min'][i] = time_target[i-3]
+        travel_time_test_data['last_80min'][i] = time_target[i-4]
+    if i % 6 == 5:
+        travel_time_test_data['last_20min'][i] = time_target[i-1]
+        travel_time_test_data['last_40min'][i] = time_target[i-2]
+        travel_time_test_data['last_60min'][i] = time_target[i-3]
+        travel_time_test_data['last_80min'][i] = time_target[i-4]
+        travel_time_test_data['last_100min'][i] = time_target[i-5]
 
 volume_target = volume_submission['volume'].values
 volume_test_data = volume_test_data.set_index(np.arange(len(volume_test_data)))
 for i in range(len(volume_test_data)):
-    if i % 6 != 0:
+    if i % 6 == 1:
         volume_test_data['last_20min'][i] = volume_target[i-1]
+    if i % 6 == 2:
+        volume_test_data['last_20min'][i] = volume_target[i-1]
+        volume_test_data['last_40min'][i] = volume_target[i-2]
+    if i % 6 == 3:
+        volume_test_data['last_20min'][i] = volume_target[i-1]
+        volume_test_data['last_40min'][i] = volume_target[i-2]
+        volume_test_data['last_60min'][i] = volume_target[i-3]
+    if i % 6 == 4:
+        volume_test_data['last_20min'][i] = volume_target[i-1]
+        volume_test_data['last_40min'][i] = volume_target[i-2]
+        volume_test_data['last_60min'][i] = volume_target[i-3]
+        volume_test_data['last_80min'][i] = volume_target[i-4]
+    if i % 6 == 5:
+        volume_test_data['last_20min'][i] = volume_target[i-1]
+        volume_test_data['last_40min'][i] = volume_target[i-2]
+        volume_test_data['last_60min'][i] = volume_target[i-3]
+        volume_test_data['last_80min'][i] = volume_target[i-4]
+        volume_test_data['last_100min'][i] = volume_target[i-5]
 
 # 写出数据
-travel_time_test_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/4.0/travel_time_test_data.csv', index=False)
-volume_test_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/4.0/volume_test_data.csv', index=False)
+travel_time_test_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.5/travel_time_test_data.csv', index=False)
+volume_test_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.5/volume_test_data.csv', index=False)

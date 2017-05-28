@@ -18,6 +18,7 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
 
     # 时间截取（只取10.7之后的数据）
 
+
     # 平均时间数据取近一个月的
     start_date = date(2016, 9, 20)
     travel_time_data['date2'] = pd.to_datetime(travel_time_data['date'], format='%Y-%m-%d')
@@ -31,6 +32,7 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
     del volume_data['date2']
 
 
+
     # 删除一些列
     #del travel_time_data['time_window']
     #del travel_time_data['start_time']
@@ -39,7 +41,7 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
     #del travel_time_data['time']
     del travel_time_data['holiday']
     #del volume_data['time_window']
-    del volume_data['etc']
+    #del volume_data['etc']
     #del volume_data['start_time']
     #del volume_data['date']
     #del volume_data['hour']
@@ -313,18 +315,24 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
     test_volume_data = test_volume_data.sort_values(by=['tollgate_id', 'direction', 'start_time'])
 
     # 写出数据
-    travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/5.0/travel_time_train_data.csv', index=False)
-    volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/5.0/volume_train_data.csv', index=False)
-    test_travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/5.0/test_travel_time_data.csv', index=False)
-    test_volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/5.0/test_volume_data.csv', index=False)
+    travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.0/travel_time_train_data.csv', index=False)
+    volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.0/volume_train_data.csv', index=False)
+    test_travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.0/test_travel_time_data.csv', index=False)
+    test_volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.0/test_volume_data.csv', index=False)
 
 
 
 def main():
-    travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/清洗过的数据/travel_time_clean_data_ffill.csv'
-    volume_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/清洗过的数据/volume_clean_data_ffill.csv'
-    test_travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/数据提取与合并/test_travel_time_feature_ffill.csv'
-    test_volumn_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/数据提取与合并/test_volume_feature_ffill.csv'
+    #travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/清洗过的数据/travel_time_clean_data_ffill.csv'
+    #volume_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/清洗过的数据/volume_clean_data_ffill.csv'
+    #test_travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/数据提取与合并/test_travel_time_feature_ffill.csv'
+    #test_volumn_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/数据提取与合并/test_volume_feature_ffill.csv'
+
+    travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/final_data/清洗数据/travel_time_clean_data_ffill.csv'
+    volume_infile = '/home/godcedric/GitLocal/KDDCUP2017/final_data/清洗数据/volume_clean_data_ffill.csv'
+    test_travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/final_data/提取数据/test_travel_time_feature_ffill.csv'
+    test_volumn_infile = '/home/godcedric/GitLocal/KDDCUP2017/final_data/提取数据/test_volume_feature_ffill.csv'
+
 
     data_feature_engineering(travel_time_infile, volume_infile, test_travel_time_infile, test_volumn_infile)
 

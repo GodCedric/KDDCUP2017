@@ -12,13 +12,15 @@ import math
 from datetime import datetime,timedelta
 
 file_suffix = '.csv'
-path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSet_phase2/'  # set the data directory
+path = '/home/godcedric/GitLocal/KDDCUP2017/final_data/原始数据/'  # set the data directory
 
 def avgTravelTime(in_file):
 
     out_suffix = '_20min_avg_travel_time'
     in_file_name = in_file + file_suffix
     out_file_name = in_file.split('_')[1] + out_suffix + file_suffix
+    out_file_path = '/home/godcedric/GitLocal/KDDCUP2017/final_data/时间窗数据/'
+    out_file_name = out_file_path + out_file_name
 
     # Step 1: Load trajectories
     fr = open(path + in_file_name, 'r')
@@ -52,29 +54,43 @@ def avgTravelTime(in_file):
 
     # Step 3: Calculate average travel time for each route per time window
     fw = open(out_file_name, 'w')
-    fw.writelines(','.join(['"intersection_id"', '"tollgate_id"', '"time_window"', '"avg_travel_time"', '"seq"']) + '\n')
+    fw.writelines(','.join(['"intersection_id"', '"tollgate_id"', '"time_window"', '"avg_travel_time"']) + '\n')
     for route in travel_times.keys():
         route_time_windows = list(travel_times[route].keys())
         route_time_windows.sort()
         for time_window_start in route_time_windows:
             time_window_end = time_window_start + timedelta(minutes=20)
             tt_set = travel_times[route][time_window_start]
+
+            # 去除平均时间异常值
+            def drop_outliers(data):
+                data = sorted(data)
+                if (len(data) <= 3):
+                    return data
+                meanall = round(sum(data) / float(len(data)), 2)
+                if (data[-1] > meanall and data[-2] < meanall):
+                    return data[:len(data) - 1]
+                else:
+                    return data
+            tt_set = drop_outliers(tt_set)
+
             avg_tt = round(sum(tt_set) / float(len(tt_set)), 2)
 
             # 输出seq
-            tt_set = [round(x,1) for x in tt_set]
-            seq = ' & '.join([str(x) for x in tt_set])
+            #tt_set = [round(x,1) for x in tt_set]
+            #seq = ' & '.join([str(x) for x in tt_set])
 
             out_line = ','.join(['"' + route.split('-')[0] + '"', '"' + route.split('-')[1] + '"',
                                  '"[' + str(time_window_start) + ',' + str(time_window_end) + ')"',
                                  '"' + str(avg_tt) + '"',
-                                 '"' + str(seq) + '"']) + '\n'
+                                 ]) + '\n'
             fw.writelines(out_line)
     fw.close()
 
 def main():
 
-    in_file = 'trajectories(table_5)_training2'
+    in_file = 'trajectories_train'
+    #in_file = 'trajectories_test'
     avgTravelTime(in_file)
 
 if __name__ == '__main__':

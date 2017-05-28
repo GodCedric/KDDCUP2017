@@ -11,7 +11,7 @@ fw = open('full_time.csv','w')
 fw.writelines(','.join(['"intersection_id"', '"tollgate_id"', '"time_window"']) + '\n')
 
 start_time = datetime(2016,7,19,0,0,0)
-end_time = datetime(2016,10,17,23,40,0)
+end_time = datetime(2016,10,24,23,40,0)
 cur_time = start_time
 
 while cur_time <= end_time:
@@ -49,7 +49,7 @@ fw = open('full_time2.csv','w')
 fw.writelines(','.join(['"tollgate_id"', '"time_window"', '"direction"']) + '\n')
 
 start_time = datetime(2016,9,19,0,0,0)
-end_time = datetime(2016,10,17,23,40,0)
+end_time = datetime(2016,10,24,23,40,0)
 cur_time = start_time
 
 while cur_time <= end_time:
@@ -82,4 +82,52 @@ while cur_time <= end_time:
     fw.writelines(out_line)
 
     cur_time = cur_time + timedelta(minutes=20)
+fw.close()
+
+
+# 为天气生成
+fw = open('full_time_forweather.csv','w')
+fw.writelines(','.join(['"date"', '"hour"']) + '\n')
+
+start_time = datetime(2016,7,1,0,0,0)
+end_time = datetime(2016,10,24,23,40,0)
+cur_time = start_time
+
+while cur_time <= end_time:
+
+    cur_date = cur_time.date()
+
+    out_line = ','.join(['"' + str(cur_date) + '"',
+                         '"' + str(0) + '"']) + '\n'
+    fw.writelines(out_line)
+
+    out_line = ','.join(['"' + str(cur_date) + '"',
+                         '"' + str(3) + '"']) + '\n'
+    fw.writelines(out_line)
+
+    out_line = ','.join(['"' + str(cur_date) + '"',
+                         '"' + str(6) + '"']) + '\n'
+    fw.writelines(out_line)
+
+    out_line = ','.join(['"' + str(cur_date) + '"',
+                         '"' + str(9) + '"']) + '\n'
+    fw.writelines(out_line)
+
+    out_line = ','.join(['"' + str(cur_date) + '"',
+                         '"' + str(12) + '"']) + '\n'
+    fw.writelines(out_line)
+
+    out_line = ','.join(['"' + str(cur_date) + '"',
+                         '"' + str(15) + '"']) + '\n'
+    fw.writelines(out_line)
+
+    out_line = ','.join(['"' + str(cur_date) + '"',
+                         '"' + str(18) + '"']) + '\n'
+    fw.writelines(out_line)
+
+    out_line = ','.join(['"' + str(cur_date) + '"',
+                         '"' + str(21) + '"']) + '\n'
+    fw.writelines(out_line)
+
+    cur_time = cur_time + timedelta(days=1)
 fw.close()

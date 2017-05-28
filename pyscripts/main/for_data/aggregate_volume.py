@@ -9,8 +9,8 @@ from datetime import datetime,timedelta
 import numpy as np
 
 file_suffix = '.csv'
-path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/training/'
-#path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/testing_phase1/'  # set the data directory
+#path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/training/'
+path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/testing_phase1/'  # set the data directory
 
 def avgVolume(in_file):
 
@@ -69,8 +69,8 @@ def avgVolume(in_file):
 
 def main():
 
-    in_file = 'volume(table 6)_training'
-    #in_file = 'volume(table 6)_test1'
+    #in_file = 'volume(table 6)_training'
+    in_file = 'volume(table 6)_test1'
     avgVolume(in_file)
 
 if __name__ == '__main__':

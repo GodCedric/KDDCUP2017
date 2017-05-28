@@ -15,8 +15,8 @@ import pandas as pd
 from collections import defaultdict
 
 file_suffix = '.csv'
-path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/training/'  # set the data directory
-#path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/testing_phase1/'
+#path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/training/'  # set the data directory
+path = '/home/godcedric/GitLocal/KDDCUP2017/dataSets/dataSets/testing_phase1/'
 
 def avgTravelTime(in_file):
 
@@ -115,8 +115,8 @@ def avgTravelTime(in_file):
 
 def main():
 
-    in_file = 'trajectories(table 5)_training'
-    #in_file = 'trajectories(table 5)_test1'
+    #in_file = 'trajectories(table 5)_training'
+    in_file = 'trajectories(table 5)_test1'
     avgTravelTime(in_file)
 
 if __name__ == '__main__':

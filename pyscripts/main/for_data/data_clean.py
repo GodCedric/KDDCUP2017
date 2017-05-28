@@ -31,11 +31,11 @@ def data_clean(travel_time_infile, volume_infile):
         return df
     travel_time_data = travel_time_data.groupby('route').apply(ff)
     """
-
+    # 异常样本删除
     def ff(df):
         df = df.sort(['avg_travel_time'], ascending=False)
         num_sample = len(df)
-        num_delete = round(0.05 * num_sample)
+        num_delete = round(0.005 * num_sample)
         return df.iloc[num_delete:]
 
     travel_time_data = travel_time_data.groupby('route').apply(ff)
@@ -83,7 +83,7 @@ def data_clean(travel_time_infile, volume_infile):
     """
 
     # 写出数据
-    travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/清洗过的数据/travel_time_clean_data_ffill.csv', index=False)
+    travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/清洗数据/travel_time_clean_data_ffill.csv', index=False)
 
 
     #####-----流量-----#####
@@ -128,12 +128,15 @@ def data_clean(travel_time_infile, volume_infile):
     volume_data['last_120min'] = volume_data.groupby(['pair'])['last_120min'].apply(bfill)
 
     # 写出数据
-    volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/清洗过的数据/volume_clean_data_ffill.csv', index=False)
+    volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/清洗数据/volume_clean_data_ffill.csv', index=False)
 
 def main():
 
-    travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/数据提取与合并/travel_time_raw_data.csv'
-    volume_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/数据提取与合并/volume_raw_data.csv'
+    #travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/数据提取与合并/travel_time_raw_data.csv'
+    #volume_infile = '/home/godcedric/GitLocal/KDDCUP2017/待加工数据集/数据提取与合并/volume_raw_data.csv'
+
+    travel_time_infile = '/home/godcedric/GitLocal/KDDCUP2017/final_data/提取数据/travel_time_raw_data.csv'
+    volume_infile = '/home/godcedric/GitLocal/KDDCUP2017/final_data/提取数据/volume_raw_data.csv'
 
     data_clean(travel_time_infile, volume_infile)
 
