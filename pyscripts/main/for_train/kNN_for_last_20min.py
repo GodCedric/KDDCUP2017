@@ -137,7 +137,8 @@ temp = min_max_scaler.transform(V31_test_data)
 V31_test_data = pd.DataFrame(temp, columns=time_columns)
 
 ### kNN预测
-KNeighborsRegressor = sklearn.neighbors.KNeighborsRegressor(n_neighbors = 5, weights='distance')
+#KNeighborsRegressor = sklearn.neighbors.KNeighborsRegressor(n_neighbors = 5, weights='distance')
+KNeighborsRegressor = sklearn.neighbors.KNeighborsRegressor(n_neighbors = 4, weights='distance')
 
 # 训练，预测
 KNeighborsRegressor.fit(A2_train_data, A2_label)
@@ -184,10 +185,10 @@ travel_time_submission['avg_travel_time'] = np.array(temp1.avg_travel_time)
 volume_submission['volume'] = np.array(temp2.volume)
 
 # 输出
-#travel_time_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/kNN1.0/travel_time_submission.csv', index=False)
-#volume_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/kNN1.0/volume_submission.csv', index=False)
+travel_time_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/phase2.0/kNN/travel_time_submission.csv', index=False)
+volume_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/phase2.0/kNN/volume_submission.csv', index=False)
 
-
+"""
 ### kNN填充last_20min缺失值
 travel_time_test_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.0/test_travel_time_data.csv')
 volume_test_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.0/test_volume_data.csv')
@@ -254,3 +255,4 @@ for i in range(len(volume_test_data)):
 # 写出数据
 travel_time_test_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.5/travel_time_test_data.csv', index=False)
 volume_test_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.5/volume_test_data.csv', index=False)
+"""

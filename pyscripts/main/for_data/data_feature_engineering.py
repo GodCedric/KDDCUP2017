@@ -16,9 +16,8 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
     test_travel_time_data = pd.read_csv(test_travel_time_infile)
     test_volume_data = pd.read_csv(test_volumn_infile)
 
-    # 时间截取（只取10.7之后的数据）
 
-
+    """
     # 平均时间数据取近一个月的
     start_date = date(2016, 9, 20)
     travel_time_data['date2'] = pd.to_datetime(travel_time_data['date'], format='%Y-%m-%d')
@@ -30,7 +29,7 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
     volume_data['date2'] = pd.to_datetime(volume_data['date'], format='%Y-%m-%d')
     volume_data = volume_data[volume_data['date2'] >= start_date]
     del volume_data['date2']
-
+    """
 
 
     # 删除一些列
@@ -315,10 +314,10 @@ def data_feature_engineering(travel_time_infile, volume_infile, test_travel_time
     test_volume_data = test_volume_data.sort_values(by=['tollgate_id', 'direction', 'start_time'])
 
     # 写出数据
-    travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.0/travel_time_train_data.csv', index=False)
-    volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.0/volume_train_data.csv', index=False)
-    test_travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.0/test_travel_time_data.csv', index=False)
-    test_volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.0/test_volume_data.csv', index=False)
+    travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/5.5/travel_time_train_data.csv', index=False)
+    volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/5.5/volume_train_data.csv', index=False)
+    test_travel_time_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/5.5/test_travel_time_data.csv', index=False)
+    test_volume_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/5.5/test_volume_data.csv', index=False)
 
 
 

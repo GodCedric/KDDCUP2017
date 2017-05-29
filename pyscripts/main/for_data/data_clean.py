@@ -88,14 +88,14 @@ def data_clean(travel_time_infile, volume_infile):
 
     #####-----流量-----#####
 
-    """
+
     # 删除节假日
     dropindex = volume_data[(volume_data['holiday'] == 1) & (volume_data['pair'] != '3-0')].index
     volume_data = volume_data.drop(dropindex, axis=0)
     dropindex = volume_data[(volume_data['pair'] == '1-0') & (volume_data['date'] == '2016-09-30')].index
     volume_data = volume_data.drop(dropindex, axis=0)
     del volume_data['holiday']
-    """
+
 
     # 风向异常值处理，以最近的风向值代替
     wind_direction = volume_data['wind_direction']

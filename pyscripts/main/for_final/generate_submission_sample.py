@@ -18,6 +18,11 @@ test_volume['start_time'] = test_volume['start_time'].map(lambda x: x + timedelt
 test_travel_time['time_window'] = test_travel_time['start_time'].map(lambda x: '[' + str(x) + ',' +str(x+timedelta(minutes=20)) + ')')
 test_volume['time_window'] = test_volume['start_time'].map(lambda x: '[' + str(x) + ',' +str(x+timedelta(minutes=20)) + ')')
 
+test_travel_time = test_travel_time.sort_values(by=['intersection_id', 'tollgate_id', 'start_time'])
+test_travel_time.index = np.arange(len(test_travel_time))
+test_volume = test_volume.sort_values(by=['tollgate_id', 'direction', 'start_time'])
+test_volume.index = np.arange(len(test_volume))
+
 del test_travel_time['start_time']
 del test_volume['start_time']
 

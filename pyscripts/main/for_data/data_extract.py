@@ -190,8 +190,11 @@ def extract_data(travel_time_infile, volume_infile, weather_infile, test_travel_
     process_data['timemap'] = process_data['time'].map(lambda x: timedic[x])
 
   # 增加法定节假日特征
-    holiday = ['2016-09-15', '2016-09-16', '2016-09-17', '2016-10-01', '2016-10-02', '2016-10-03', '2016-10-04',
-               '2016-10-05', '2016-10-06', '2016-10-07']
+    #holiday = ['2016-09-15', '2016-09-16', '2016-09-17', '2016-10-01', '2016-10-02', '2016-10-03', '2016-10-04',
+               #'2016-10-05', '2016-10-06', '2016-10-07']
+
+    holiday = [date(2016,9,15),date(2016,9,16),date(2016,9,17),date(2016,10,1),date(2016,10,2),date(2016,10,3),date(2016,10,4),date(2016,10,5),date(2016,10,6),date(2016,10,7)]
+
     def ff(x):
         if x in holiday:
             return 1

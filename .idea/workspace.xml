@@ -2,27 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0904e23d-00eb-4e26-8604-8a2523714f1e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/main/for_final/generate_submission_sample.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/main/for_final/generate_trajectorie_and_volume_data.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/main/for_final/generate_weather_data.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dataSets/dataSets/training/weather (table 7)_training.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/6.5/travel_time_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/6.5/volume_test_data.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSets/dataSet_phase2/volume(table 6)_test2.csv" afterPath="$PROJECT_DIR$/dataSets/dataSet_phase2/volume(table 6)_test2.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSets/dataSet_phase2/volume(table 6)_training2.csv" afterPath="$PROJECT_DIR$/dataSets/dataSet_phase2/volume(table 6)_training2.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/analyze/full_time.csv" afterPath="$PROJECT_DIR$/pyscripts/analyze/full_time.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/analyze/full_time.py" afterPath="$PROJECT_DIR$/pyscripts/analyze/full_time.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/analyze/full_time2.csv" afterPath="$PROJECT_DIR$/pyscripts/analyze/full_time2.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_data/aggregate_travel_time.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_data/aggregate_travel_time.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_data/aggregate_travel_time_phase2.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_data/aggregate_travel_time_phase2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_data/aggregate_volume.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_data/aggregate_volume.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_data/aggregate_volume_phase2.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_data/aggregate_volume_phase2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final_data/加工好的数据/5.5/test_travel_time_data.csv" afterPath="$PROJECT_DIR$/final_data/加工好的数据/5.5/test_travel_time_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final_data/加工好的数据/5.5/volume_train_data.csv" afterPath="$PROJECT_DIR$/final_data/加工好的数据/5.5/volume_train_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final_data/原始数据/submission_sample_travelTime.csv" afterPath="$PROJECT_DIR$/final_data/原始数据/submission_sample_travelTime.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final_data/原始数据/submission_sample_volume.csv" afterPath="$PROJECT_DIR$/final_data/原始数据/submission_sample_volume.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final_data/提取数据/travel_time_raw_data.csv" afterPath="$PROJECT_DIR$/final_data/提取数据/travel_time_raw_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final_data/提取数据/volume_raw_data.csv" afterPath="$PROJECT_DIR$/final_data/提取数据/volume_raw_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final_data/清洗数据/travel_time_clean_data_ffill.csv" afterPath="$PROJECT_DIR$/final_data/清洗数据/travel_time_clean_data_ffill.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final_data/清洗数据/volume_clean_data_ffill.csv" afterPath="$PROJECT_DIR$/final_data/清洗数据/volume_clean_data_ffill.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_data/data_clean.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_data/data_clean.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_data/data_extract.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_data/data_extract.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_data/data_feature_engineering.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_data/data_feature_engineering.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_data/link_information.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_data/link_information.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_data/split_and_prepare_train_data.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_data/split_and_prepare_train_data.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_data/volume_information.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_data/volume_information.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_final/generate_submission_sample.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_final/generate_submission_sample.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_train/kNN_for_last_20min.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_train/kNN_for_last_20min.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_train/mean.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_train/mean.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_train/split_RF1.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_train/split_RF1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_train/xgboost1.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_train/xgboost1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submission_result/phase1.5/mean1.5/2小时修正/travel_time_submission.csv" afterPath="$PROJECT_DIR$/submission_result/phase1.5/mean1.5/2小时修正/travel_time_submission.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submission_result/phase1.5/mean1.5/2小时修正/volume_submission.csv" afterPath="$PROJECT_DIR$/submission_result/phase1.5/mean1.5/2小时修正/volume_submission.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/A2_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/A2_test_data.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/A2_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/A2_train_data.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/A3_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/A3_test_data.csv" />
@@ -45,6 +46,28 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V30_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V30_train_data.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V31_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V31_test_data.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V31_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V31_train_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A2_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A2_test_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A2_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A2_train_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A3_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A3_test_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A3_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A3_train_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B1_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B1_test_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B1_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B1_train_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B3_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B3_test_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B3_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B3_train_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C1_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C1_test_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C1_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C1_train_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C3_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C3_test_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C3_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C3_train_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V10_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V10_test_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V10_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V10_train_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V11_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V11_test_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V11_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V11_train_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V20_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V20_test_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V20_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V20_train_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V30_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V30_test_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V30_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V30_train_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V31_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V31_test_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V31_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V31_train_data.csv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,56 +85,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="data_extract.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pyscripts/main/for_data/data_extract.py">
+      <file leaf-file-name="xgboost1.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/xgboost1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="539" column="30" lean-forward="true" selection-start-line="539" selection-start-column="30" selection-end-line="539" selection-end-column="30" />
+            <state relative-caret-position="-277">
+              <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data_clean.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pyscripts/main/for_data/data_clean.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="137" column="33" lean-forward="false" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data_feature_engineering.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pyscripts/main/for_data/data_feature_engineering.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5090">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kNN_for_last_20min.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/kNN_for_last_20min.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="242" column="32" lean-forward="true" selection-start-line="242" selection-start-column="32" selection-end-line="242" selection-end-column="32" />
-              <folding>
-                <element signature="e#78#96#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="split_and_prepare_train_data.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pyscripts/main/for_data/split_and_prepare_train_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="195" column="27" lean-forward="false" selection-start-line="195" selection-start-column="27" selection-end-line="195" selection-end-column="27" />
-              <folding>
-                <element signature="e#67#85#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -167,9 +146,6 @@
         <option value="$PROJECT_DIR$/pyscripts/data_feature_engineering.py" />
         <option value="$PROJECT_DIR$/pyscripts/data_extract.py" />
         <option value="$PROJECT_DIR$/pyscripts/main/for_data/cv_for_time_train_data.py" />
-        <option value="$PROJECT_DIR$/pyscripts/main/for_train/mean.py" />
-        <option value="$PROJECT_DIR$/pyscripts/main/for_train/xgboost1.py" />
-        <option value="$PROJECT_DIR$/pyscripts/main/for_train/split_RF1.py" />
         <option value="$PROJECT_DIR$/pyscripts/main/for_train/result_combination.py" />
         <option value="$PROJECT_DIR$/pyscripts/main/for_data/aggregate_travel_time.py" />
         <option value="$PROJECT_DIR$/pyscripts/main/for_data/aggregate_volume.py" />
@@ -182,19 +158,22 @@
         <option value="$PROJECT_DIR$/pyscripts/main/for_data/aggregate_volume_phase2.py" />
         <option value="$PROJECT_DIR$/pyscripts/main/for_final/generate_weather_data.py" />
         <option value="$PROJECT_DIR$/pyscripts/main/for_final/generate_submission_sample.py" />
+        <option value="$PROJECT_DIR$/pyscripts/main/for_data/data_extract.py" />
         <option value="$PROJECT_DIR$/pyscripts/main/for_data/data_clean.py" />
         <option value="$PROJECT_DIR$/pyscripts/main/for_data/data_feature_engineering.py" />
-        <option value="$PROJECT_DIR$/pyscripts/main/for_data/split_and_prepare_train_data.py" />
+        <option value="$PROJECT_DIR$/pyscripts/main/for_train/split_RF1.py" />
+        <option value="$PROJECT_DIR$/pyscripts/main/for_train/mean.py" />
         <option value="$PROJECT_DIR$/pyscripts/main/for_train/kNN_for_last_20min.py" />
-        <option value="$PROJECT_DIR$/pyscripts/main/for_data/data_extract.py" />
+        <option value="$PROJECT_DIR$/pyscripts/main/for_data/split_and_prepare_train_data.py" />
+        <option value="$PROJECT_DIR$/pyscripts/main/for_train/xgboost1.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="545" />
-    <option name="y" value="229" />
+    <option name="x" value="212" />
+    <option name="y" value="52" />
     <option name="width" value="1193" />
-    <option name="height" value="704" />
+    <option name="height" value="716" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -214,7 +193,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -310,64 +288,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Learn_Machine_Learning" />
   </component>
-  <component name="RunManager" selected="Python.kNN_for_last_20min">
-    <configuration default="false" name="data_extract" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyscripts/main/for_data" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="KDDCUP2017" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/main/for_data/data_extract.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="data_clean" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyscripts/main/for_data" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="KDDCUP2017" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/main/for_data/data_clean.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="data_feature_engineering" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyscripts/main/for_data" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="KDDCUP2017" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/main/for_data/data_feature_engineering.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.xgboost1">
     <configuration default="false" name="split_and_prepare_train_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -385,6 +313,40 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="split_RF1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyscripts/main/for_train" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KDDCUP2017" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/main/for_train/split_RF1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="mean" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyscripts/main/for_train" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KDDCUP2017" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/main/for_train/mean.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="false" name="kNN_for_last_20min" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -398,6 +360,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="KDDCUP2017" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/main/for_train/kNN_for_last_20min.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="xgboost1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyscripts/main/for_train" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KDDCUP2017" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyscripts/main/for_train/xgboost1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -537,19 +516,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.data_extract" />
-      <item index="1" class="java.lang.String" itemvalue="Python.data_clean" />
-      <item index="2" class="java.lang.String" itemvalue="Python.data_feature_engineering" />
-      <item index="3" class="java.lang.String" itemvalue="Python.split_and_prepare_train_data" />
-      <item index="4" class="java.lang.String" itemvalue="Python.kNN_for_last_20min" />
+      <item index="0" class="java.lang.String" itemvalue="Python.split_and_prepare_train_data" />
+      <item index="1" class="java.lang.String" itemvalue="Python.split_RF1" />
+      <item index="2" class="java.lang.String" itemvalue="Python.mean" />
+      <item index="3" class="java.lang.String" itemvalue="Python.kNN_for_last_20min" />
+      <item index="4" class="java.lang.String" itemvalue="Python.xgboost1" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.kNN_for_last_20min" />
-        <item index="1" class="java.lang.String" itemvalue="Python.data_feature_engineering" />
-        <item index="2" class="java.lang.String" itemvalue="Python.data_clean" />
-        <item index="3" class="java.lang.String" itemvalue="Python.data_extract" />
-        <item index="4" class="java.lang.String" itemvalue="Python.split_and_prepare_train_data" />
+        <item index="0" class="java.lang.String" itemvalue="Python.xgboost1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.split_RF1" />
+        <item index="2" class="java.lang.String" itemvalue="Python.split_and_prepare_train_data" />
+        <item index="3" class="java.lang.String" itemvalue="Python.kNN_for_last_20min" />
+        <item index="4" class="java.lang.String" itemvalue="Python.mean" />
       </list>
     </recent_temporary>
   </component>
@@ -567,7 +546,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="545" y="229" width="1193" height="704" extended-state="0" />
+    <frame x="212" y="52" width="1193" height="716" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30762783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -575,7 +554,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.50269026" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="119" y="304" width="1194" height="233" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3243243" sideWeight="0.49730977" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27613103" sideWeight="0.49730977" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3623311" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -629,20 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pandas/indexes/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="2133" column="0" lean-forward="false" selection-start-line="2133" selection-start-column="0" selection-end-line="2133" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pandas/core/internals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="326" column="0" lean-forward="false" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -707,27 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/mean.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-782">
-          <caret line="160" column="0" lean-forward="true" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/xgboost1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2397">
-          <caret line="164" column="45" lean-forward="false" selection-start-line="164" selection-start-column="45" selection-end-line="164" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/split_RF1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="129" column="52" lean-forward="false" selection-start-line="129" selection-start-column="52" selection-end-line="129" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
@@ -760,9 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61">
           <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-          <folding>
-            <element signature="e#61#79#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -770,9 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="113" column="14" lean-forward="false" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="14" />
-          <folding>
-            <element signature="e#161#172#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -780,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="129" column="27" lean-forward="true" selection-start-line="129" selection-start-column="27" selection-end-line="129" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,9 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
           <caret line="94" column="18" lean-forward="false" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
-          <folding>
-            <element signature="e#105#116#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -799,7 +733,7 @@
         <state relative-caret-position="289">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="25" selection-end-column="49" />
           <folding>
-            <element signature="e#161#172#0" expanded="true" />
+            <element signature="e#161#172#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -808,9 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
-          <folding>
-            <element signature="e#161#172#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -818,7 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="60" column="59" lean-forward="false" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -826,9 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="e#47#65#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -836,9 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="49" />
-          <folding>
-            <element signature="e#104#115#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -846,63 +770,96 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
           <caret line="98" column="34" lean-forward="true" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="34" />
-          <folding>
-            <element signature="e#47#65#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pyscripts/main/for_final/generate_submission_sample.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="51" lean-forward="false" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-          <folding>
-            <element signature="e#47#65#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_data/split_and_prepare_train_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="195" column="27" lean-forward="false" selection-start-line="195" selection-start-column="27" selection-end-line="195" selection-end-column="27" />
-          <folding>
-            <element signature="e#67#85#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pyscripts/main/for_data/data_extract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="539" column="30" lean-forward="true" selection-start-line="539" selection-start-column="30" selection-end-line="539" selection-end-column="30" />
+        <state relative-caret-position="136">
+          <caret line="422" column="41" lean-forward="false" selection-start-line="422" selection-start-column="41" selection-end-line="422" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pyscripts/main/for_data/data_clean.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="137" column="33" lean-forward="false" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
+        <state relative-caret-position="-895">
+          <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pyscripts/main/for_data/data_feature_engineering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5090">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="-1405">
+          <caret line="226" column="36" lean-forward="true" selection-start-line="226" selection-start-column="36" selection-end-line="226" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pandas/core/internals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="3542" column="0" lean-forward="false" selection-start-line="3542" selection-start-column="0" selection-end-line="3542" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pandas/indexes/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="2135" column="0" lean-forward="false" selection-start-line="2135" selection-start-column="0" selection-end-line="2135" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/kNN_for_last_20min.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="242" column="32" lean-forward="true" selection-start-line="242" selection-start-column="32" selection-end-line="242" selection-end-column="32" />
+        <state relative-caret-position="190">
+          <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/mean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="219" column="25" lean-forward="false" selection-start-line="219" selection-start-column="25" selection-end-line="219" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/split_RF1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="101" column="37" lean-forward="false" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_data/split_and_prepare_train_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="29" lean-forward="false" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
           <folding>
-            <element signature="e#78#96#0" expanded="true" />
+            <element signature="e#67#85#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/xgboost1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-277">
+          <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -120,8 +120,8 @@ V31_test_data['volume'] = rf_base1.predict(V31_test_data)
 
 
 ### 整合及输出
-travel_time_submission = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_sample/travel_time_submission.csv')
-volume_submission = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_sample/volume_submission.csv')
+travel_time_submission = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/原始数据/submission_sample_travelTime.csv')
+volume_submission = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/原始数据/submission_sample_volume.csv')
 
 temp1 = pd.concat([A2_test_data, A3_test_data, B1_test_data, B3_test_data, C1_test_data, C3_test_data], axis=0)
 temp2 = pd.concat([V10_test_data, V11_test_data, V20_test_data, V30_test_data, V31_test_data], axis=0)
@@ -130,5 +130,5 @@ travel_time_submission['avg_travel_time'] = np.array(temp1.avg_travel_time)
 volume_submission['volume'] = np.array(temp2.volume)
 
 ### 输出
-travel_time_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/phase1.5/splitRF/travel_time_submission.csv', index=False)
-volume_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/phase1.5/splitRF/volume_submission.csv', index=False)
+travel_time_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/phase2.0/splitRF/travel_time_submission.csv', index=False)
+volume_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/phase2.0/splitRF/volume_submission.csv', index=False)
