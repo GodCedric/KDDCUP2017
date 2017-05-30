@@ -218,11 +218,11 @@ correct = travel_time_before2hour['delta'].copy().values
 
 # 不需要修正的路段
 correct[0:84] = 0     #A2
-correct[84:168] = 0   #A3
-correct[168:252] = 0  #B1
+#correct[84:168] = 0   #A3
+#correct[168:252] = 0  #B1
 correct[252:336] = 0  #B3
-correct[336:420] = 0  #C1
-correct[420:504] = 0  #C3
+#correct[336:420] = 0  #C1
+#correct[420:504] = 0  #C3
 
 for i in range(6, len(correct)+1):
     if (i%6) == 0:
@@ -236,11 +236,12 @@ volume_before2hour['delta'] = volume_before2hour['volume'] - volume_before2hour[
 correct = volume_before2hour['delta'].copy().values
 
 # 不需要修正的pair
-correct[0:84] = 0     #10
-correct[84:168] = 0   #11
+#correct[0:84] = 0     #10
+#correct[84:168] = 0   #11
 correct[168:252] = 0  #20
 correct[252:336] = 0  #30
-correct[336:420] = 0  #31
+#correct[336:420] = 0  #31
+
 for i in range(6, len(correct)+1):
     if (i%6) == 0:
         co = 0.5*correct[i-6] + 0.25*correct[i-5] + 0.1*correct[i-4] + 0.05*correct[i-3] + 0.05*correct[i-2] + 0.05*correct[i-1]

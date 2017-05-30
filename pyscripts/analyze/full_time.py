@@ -7,10 +7,10 @@
 
 from datetime import datetime,date,time,timedelta
 
-fw = open('full_time.csv','w')
+fw = open('full_time1.csv','w')
 fw.writelines(','.join(['"intersection_id"', '"tollgate_id"', '"time_window"']) + '\n')
 
-start_time = datetime(2016,7,19,0,0,0)
+start_time = datetime(2016,9,19,0,0,0)
 end_time = datetime(2016,10,24,23,40,0)
 cur_time = start_time
 

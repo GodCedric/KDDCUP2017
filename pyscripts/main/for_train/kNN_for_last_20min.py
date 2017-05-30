@@ -137,8 +137,8 @@ temp = min_max_scaler.transform(V31_test_data)
 V31_test_data = pd.DataFrame(temp, columns=time_columns)
 
 ### kNN预测
-#KNeighborsRegressor = sklearn.neighbors.KNeighborsRegressor(n_neighbors = 5, weights='distance')
-KNeighborsRegressor = sklearn.neighbors.KNeighborsRegressor(n_neighbors = 4, weights='distance')
+KNeighborsRegressor = sklearn.neighbors.KNeighborsRegressor(n_neighbors = 5, weights='distance')
+#KNeighborsRegressor = sklearn.neighbors.KNeighborsRegressor(n_neighbors = 4, weights='distance')
 
 # 训练，预测
 KNeighborsRegressor.fit(A2_train_data, A2_label)

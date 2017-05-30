@@ -16,6 +16,13 @@ travel_time_test_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/final_d
 volume_test_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/加工好的数据/6.5/test_volume_data.csv')
 
 
+"""
+travel_time_train_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/5.0/travel_time/包含1个月的训练集和测试集/travel_time_train_data.csv')
+volume_train_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/5.0/volume/volume_train_data.csv')
+travel_time_test_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/5.0/travel_time/包含1个月的训练集和测试集/test_travel_time_data.csv')
+volume_test_data = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/加工过的数据集/5.0/volume/test_volume_data.csv')
+"""
+
 ### 只取9.19之后的数据
 start_date = date(2016,9,19)
 travel_time_train_data['date'] = pd.to_datetime(travel_time_train_data['date'], format='%Y-%m-%d')
@@ -61,27 +68,27 @@ V31_test_data = volume_test_data[volume_test_data['pair'] == '3-1']
 ### 特征选择
 travel_time_features = ['avg_travel_time',\
                         'hour', 'minute', 'weekday', 'timemap',\
-                        'pressure', 'wind_direction', 'wind_direction', 'wind_speed', 'temperature', 'rel_humidity', 'precipitation',\
-                        'last_20min',\
+                        'pressure', 'wind_direction', 'wind_speed', 'temperature', 'rel_humidity', 'precipitation',\
+                        #'last_20min',\
                         'SSD',\
                         'is_workday'
                        ]
 travel_time_features2 = ['hour', 'minute', 'weekday', 'timemap',\
-                        'pressure', 'wind_direction', 'wind_direction', 'wind_speed', 'temperature', 'rel_humidity', 'precipitation',\
-                        'last_20min',\
+                        'pressure', 'wind_direction', 'wind_speed', 'temperature', 'rel_humidity', 'precipitation',\
+                        #'last_20min',\
                         'SSD',\
                         'is_workday'
                        ]
 volume_features = ['volume',\
                    'hour', 'minute', 'weekday', 'timemap',\
-                   'pressure', 'wind_direction', 'wind_direction', 'wind_speed', 'temperature', 'rel_humidity', 'precipitation',\
-                   'last_20min',\
+                   'pressure', 'wind_direction', 'wind_speed', 'temperature', 'rel_humidity', 'precipitation',\
+                   #'last_20min',\
                    'SSD',\
                    'is_workday'
                   ]
 volume_features2 = ['hour', 'minute', 'weekday', 'timemap',\
-                   'pressure', 'wind_direction', 'wind_direction', 'wind_speed', 'temperature', 'rel_humidity', 'precipitation',\
-                   'last_20min',\
+                   'pressure', 'wind_direction', 'wind_speed', 'temperature', 'rel_humidity', 'precipitation',\
+                   #'last_20min',\
                    'SSD',\
                    'is_workday'
                   ]
