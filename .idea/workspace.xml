@@ -2,39 +2,204 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0904e23d-00eb-4e26-8604-8a2523714f1e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/main/for_data/data_feature_engineering2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/main/for_train/result_combination_final.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/main/for_train/split_RF_with_feature2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyscripts/main/for_train/split_xgboost_with_feature2.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/5.5.tar.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/5.5/test_travel_time_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/5.5/test_volume_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/5.5/travel_time_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/5.5/volume_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/6.0/test_travel_time_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/6.0/test_volume_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/6.0/travel_time_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/6.0/volume_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/6.5/test_travel_time_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/6.5/test_volume_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/7.0/test_travel_time_data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/7.0/test_volume_data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/7.0/travel_time_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/加工好的数据/7.0/volume_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/原始数据/submission_sample_travelTime.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/原始数据/submission_sample_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/原始数据/trajectories_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/原始数据/trajectories_train.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/原始数据/volume_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/原始数据/volume_train.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/原始数据/weather_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/原始数据/weather_train.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/提取数据/test_travel_time_feature_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/提取数据/test_volume_feature_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/提取数据/travel_time_raw_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/提取数据/volume_raw_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/时间窗数据/test_20min_avg_travel_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/时间窗数据/test_20min_avg_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/时间窗数据/train_20min_avg_travel_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/时间窗数据/train_20min_avg_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/清洗数据/travel_time_clean_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/final_data/清洗数据/volume_clean_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pyscripts/main/for_train/split_xgboost.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/submission_sample/submission_sample_travelTime.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/submission_sample/submission_sample_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/submission_sample/travel_time_submission.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/submission_sample/volume_submission.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/含前6小时窗口/以均值填充缺失值的训练集及测试集/test_travel_time_feature_meanfill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/含前6小时窗口/以均值填充缺失值的训练集及测试集/test_volume_feature_meanfill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/含前6小时窗口/以均值填充缺失值的训练集及测试集/travel_time_data_meanfill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/含前6小时窗口/以均值填充缺失值的训练集及测试集/volume_data_meanfill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/含前6小时窗口/以最近值填充缺失值的训练集及测试集/test_travel_time_feature_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/含前6小时窗口/以最近值填充缺失值的训练集及测试集/test_volume_feature_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/含前6小时窗口/以最近值填充缺失值的训练集及测试集/travel_time_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/含前6小时窗口/以最近值填充缺失值的训练集及测试集/volume_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/含前6小时窗口/缺失值未处理的训练集及测试集/test_travel_time_feature_nofill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/含前6小时窗口/缺失值未处理的训练集及测试集/test_volume_feature_nofill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/含前6小时窗口/缺失值未处理的训练集及测试集/travel_time_data_nofill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/含前6小时窗口/缺失值未处理的训练集及测试集/volume_data_nofill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/数据生成文件/KDD_data_clean.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/数据生成文件/KDD_data_extract.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/数据生成文件/KDD_feature_engineering.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/数据生成文件/KDD_testdata_ectract.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/数据生成文件/full_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/数据生成文件/full_time2.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/数据生成文件/travel_time_raw_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/数据生成文件/travel_time_raw_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/数据生成文件/volume_raw_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/数据生成文件/volume_raw_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/训练集测试集全时间段补充数据/readme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/训练集测试集全时间段补充数据/test_travel_time_feature.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/训练集测试集全时间段补充数据/test_volume_feature.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/训练集测试集全时间段补充数据/travel_time_before2hours.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/训练集测试集全时间段补充数据/travel_time_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/训练集测试集全时间段补充数据/volume_before2hour2.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/1.0/训练集测试集全时间段补充数据/volume_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/2.0/以最近值填充的/test_travel_time_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/2.0/以最近值填充的/test_volume_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/2.0/以最近值填充的/travel_time_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/2.0/以最近值填充的/volume_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/3.0/readme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/3.0/test_travel_time_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/3.0/test_volume_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/3.0/travel_time_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/3.0/volume_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/4.0/readme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/4.0/travel_time_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/4.0/volume_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/kNN填充缺失值/travel_time_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/kNN填充缺失值/volume_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/readme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/travel_time/1个月训练集分割4份/week1/train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/travel_time/1个月训练集分割4份/week1/val_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/travel_time/1个月训练集分割4份/week2/train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/travel_time/1个月训练集分割4份/week2/val_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/travel_time/1个月训练集分割4份/week3/train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/travel_time/1个月训练集分割4份/week3/val_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/travel_time/1个月训练集分割4份/week4/train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/travel_time/1个月训练集分割4份/week4/val_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/travel_time/包含1个月的训练集和测试集/test_travel_time_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/travel_time/包含1个月的训练集和测试集/travel_time_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/volume/test_volume_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加工过的数据集/5.0/volume/volume_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/18_25号时间窗数据/18_24_full_20min_avg_travel_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/18_25号时间窗数据/18_24_full_20min_avg_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/18_25号时间窗数据/phase1_target_values_travel_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/18_25号时间窗数据/phase1_target_values_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/18_25时间窗包含seq/full_travel_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/18_25时间窗包含seq/full_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/18_25时间窗包含seq/phase1_target_values_travel_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/初始形成时间窗的数据集/test1_20min_avg_travel_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/初始形成时间窗的数据集/test1_20min_avg_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/初始形成时间窗的数据集/training_20min_avg_travel_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/初始形成时间窗的数据集/training_20min_avg_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/初始形成时间窗的数据集/training_20min_avg_volume_info.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/初始形成时间窗的数据集/weather (table 7)_test1.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/初始形成时间窗的数据集/weather (table 7)_training_update.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/数据提取与合并/test_travel_time_feature_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/数据提取与合并/test_volume_feature_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/数据提取与合并/travel_time_raw_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/数据提取与合并/volume_raw_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/清洗过的数据/travel_time_clean_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/清洗过的数据/volume_clean_data_ffill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/绿色时间均值填充/travel_time_green_timewindow_meanfill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/待加工数据集/绿色时间均值填充/volume_green_timewindow_meanfill.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/特征工程2/时间窗数据/test1_20min_avg_travel_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/特征工程2/时间窗数据/test1_20min_avg_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/特征工程2/时间窗数据/test1_link_info.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/特征工程2/时间窗数据/test1_volume_info.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/特征工程2/时间窗数据/training_20min_avg_travel_time.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/特征工程2/时间窗数据/training_20min_avg_volume.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/特征工程2/时间窗数据/training_link_info.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/特征工程2/时间窗数据/training_volume_info.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/A2_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/A2_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/A3_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/A3_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/B1_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/B1_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/B3_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/B3_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/C1_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/C1_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/C3_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/C3_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/V10_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/V10_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/V11_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/V11_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/V20_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/V20_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/V30_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/V30_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/V31_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_last20_非独热_非量化天气/V31_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/A2_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/A2_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/A3_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/A3_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/B1_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/B1_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/B3_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/B3_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/C1_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/C1_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/C3_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/C3_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V10_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V10_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V11_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V11_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V20_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V20_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V30_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V30_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V31_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_独热_非量化天气/V31_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A2_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A2_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A3_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A3_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B1_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B1_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B3_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B3_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C1_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C1_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C3_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C3_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V10_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V10_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V11_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V11_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V20_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V20_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V30_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V30_train_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V31_test_data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V31_train_data.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/analyze/full_time.py" afterPath="$PROJECT_DIR$/pyscripts/analyze/full_time.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_data/split_and_prepare_train_data.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_data/split_and_prepare_train_data.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_train/kNN_for_last_20min.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_train/kNN_for_last_20min.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_train/mean.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_train/mean.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_train/result_combination.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_train/result_combination.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyscripts/main/for_train/xgboost1.py" afterPath="$PROJECT_DIR$/pyscripts/main/for_train/xgboost1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submission_result/phase2.0/kNN/travel_time_submission.csv" afterPath="$PROJECT_DIR$/submission_result/phase2.0/kNN/travel_time_submission.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submission_result/phase2.0/kNN/volume_submission.csv" afterPath="$PROJECT_DIR$/submission_result/phase2.0/kNN/volume_submission.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submission_result/phase2.0/xgboost_liu/travel_time_submission.csv" afterPath="$PROJECT_DIR$/submission_result/phase2.0/xgboost_liu/travel_time_submission.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submission_result/phase2.0/xgboost_liu/volume_submission.csv" afterPath="$PROJECT_DIR$/submission_result/phase2.0/xgboost_liu/volume_submission.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A2_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A2_test_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A2_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A2_train_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A3_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A3_test_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A3_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/A3_train_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B1_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B1_test_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B1_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B1_train_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B3_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B3_test_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B3_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/B3_train_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C1_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C1_test_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C1_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C1_train_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C3_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C3_test_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C3_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/C3_train_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V10_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V10_test_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V10_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V10_train_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V11_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V11_test_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V11_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V11_train_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V20_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V20_test_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V20_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V20_train_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V30_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V30_test_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V30_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V30_train_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V31_test_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V31_test_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V31_train_data.csv" afterPath="$PROJECT_DIR$/训练数据/分割_非独热_非量化天气/V31_train_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submission_result/phase2.0/Mean/travel_time_submission.csv" afterPath="$PROJECT_DIR$/submission_result/phase2.0/Mean/travel_time_submission.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submission_result/phase2.0/Mean/volume_submission.csv" afterPath="$PROJECT_DIR$/submission_result/phase2.0/Mean/volume_submission.csv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,18 +216,7 @@
     <favorites_list name="KDDCUP2017" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="data_extract.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pyscripts/main/for_data/data_extract.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5797">
-              <caret line="527" column="14" lean-forward="false" selection-start-line="527" selection-start-column="14" selection-end-line="527" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -82,10 +236,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/avr_prediction.py" />
-        <option value="$PROJECT_DIR$/avr_time_prediction.py" />
-        <option value="$PROJECT_DIR$/avg_time_prediction.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/avg_volume_prediction.py" />
         <option value="$PROJECT_DIR$/pyscripts/Data_transform.py" />
         <option value="$PROJECT_DIR$/pyscripts/Data_format.py" />
@@ -131,15 +281,19 @@
         <option value="$PROJECT_DIR$/pyscripts/main/for_train/kNN_for_last_20min.py" />
         <option value="$PROJECT_DIR$/pyscripts/main/for_train/result_combination.py" />
         <option value="$PROJECT_DIR$/pyscripts/analyze/full_time.py" />
-        <option value="$PROJECT_DIR$/pyscripts/main/for_train/mean.py" />
         <option value="$PROJECT_DIR$/pyscripts/main/for_data/split_and_prepare_train_data.py" />
+        <option value="$PROJECT_DIR$/pyscripts/main/for_data/data_feature_engineering2.py" />
+        <option value="$PROJECT_DIR$/pyscripts/main/for_train/split_xgboost_with_feature2.py" />
+        <option value="$PROJECT_DIR$/pyscripts/main/for_train/split_RF_with_feature2.py" />
+        <option value="$PROJECT_DIR$/pyscripts/main/for_train/mean.py" />
+        <option value="$PROJECT_DIR$/pyscripts/main/for_train/result_combination_final.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="297" />
-    <option name="y" value="141" />
-    <option name="width" value="1301" />
+    <option name="x" value="65" />
+    <option name="y" value="71" />
+    <option name="width" value="1303" />
     <option name="height" value="716" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -160,6 +314,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -276,7 +431,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -535,10 +689,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="297" y="141" width="1301" height="716" extended-state="0" />
-    <editor active="true" />
+    <frame x="65" y="71" width="1303" height="716" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27901614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1941673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.50269026" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -603,16 +757,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pyscripts/first_prediction.py" />
-    <entry file="file://$PROJECT_DIR$/pyscripts/aggregate_volume.py" />
-    <entry file="file://$PROJECT_DIR$/pyscripts/test.py" />
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/xgboost-0.6-py3.6.egg/xgboost/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pyscripts/split_and_prepare_train_data.py" />
     <entry file="file://$PROJECT_DIR$/pyscripts/RF1.py" />
     <entry file="file://$PROJECT_DIR$/pyscripts/split_xgboost.py" />
@@ -798,27 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2907">
           <caret line="174" column="62" lean-forward="false" selection-start-line="174" selection-start-column="62" selection-end-line="174" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_data/split_and_prepare_train_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding>
-            <element signature="e#67#85#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/split_RF1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
-          <caret line="125" column="37" lean-forward="false" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
-          <folding>
-            <element signature="e#69#87#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -826,15 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
           <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/mean.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="82" column="35" lean-forward="false" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,7 +956,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -850,15 +963,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/split_RF1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="109" column="51" lean-forward="true" selection-start-line="109" selection-start-column="51" selection-end-line="109" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_data/split_and_prepare_train_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="28" column="50" lean-forward="false" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pyscripts/main/for_data/data_extract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5797">
+        <state relative-caret-position="17">
           <caret line="527" column="14" lean-forward="false" selection-start-line="527" selection-start-column="14" selection-end-line="527" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_data/data_feature_engineering2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="1179" column="40" lean-forward="true" selection-start-line="1179" selection-start-column="40" selection-end-line="1179" selection-end-column="40" />
+          <folding>
+            <element signature="e#47#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/split_xgboost_with_feature2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="521" column="0" lean-forward="true" selection-start-line="521" selection-start-column="0" selection-end-line="521" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/split_RF_with_feature2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="282" column="125" lean-forward="false" selection-start-line="282" selection-start-column="125" selection-end-line="282" selection-end-column="125" />
+          <folding>
+            <element signature="e#47#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/mean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-412">
+          <caret line="251" column="0" lean-forward="false" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyscripts/main/for_train/result_combination_final.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="34" column="100" lean-forward="false" selection-start-line="34" selection-start-column="100" selection-end-line="34" selection-end-column="100" />
+          <folding>
+            <element signature="e#47#65#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,0 +1,11 @@
+训练集：
+	travel_time_data_ffill.csv：7.19～10.17 全时间段平均时间训练集数据
+	volume_data_ffill.csv： 9.19～10.17 全时间段流量训练集数据
+
+测试集：（6点～8点，15点～17点）
+	travel_time_before2hours.csv： 10.18～10.24 6～8，15～17点平均时间数据
+	volume_before2hour2.csv：10.18～10.24 6～8，15～17点流量数据
+
+测试集：（8点～10点，17点～19点）
+	test_travel_time_feature.csv： 10.18～10.24 8～10，17～19点平均时间特征集
+	test_volume_feature.csv： 10.18～10.24 8～10，17～19点流量特征集

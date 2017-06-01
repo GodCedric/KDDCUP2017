@@ -18,6 +18,77 @@ travel_time_submission = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/final_
 volume_submission = pd.read_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/原始数据/submission_sample_volume.csv')
 
 
+# 给出训练集均值结果
+time_group = travel_time_train_data.groupby(['route','weekday','timemap'])['avg_travel_time'].mean()
+volume_group = volume_train_data.groupby(['pair', 'weekday', 'timemap'])['volume'].mean()
+travel_time_train_data['mean_travel_time'] = np.nan
+volume_train_data['mean_volume'] = np.nan
+
+for i in range(len(travel_time_train_data)):
+    route_key = travel_time_train_data.ix[i, 'route']
+    weekday_key = travel_time_train_data.ix[i, 'weekday']
+    timemap_key = travel_time_train_data.ix[i, 'timemap']
+    value = time_group[route_key][weekday_key][timemap_key]
+    travel_time_train_data.ix[i, 'mean_travel_time'] = value
+
+for i in range(len(volume_train_data)):
+    pair_key = volume_train_data.ix[i, 'pair']
+    weekday_key = volume_train_data.ix[i, 'weekday']
+    timemap_key = volume_train_data.ix[i, 'timemap']
+    value = volume_group[pair_key][weekday_key][timemap_key]
+    volume_train_data.ix[i, 'mean_volume'] = value
+
+travel_time_train_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/train_mean/time_train_with_mean.csv', index=False)
+volume_train_data.to_csv('/home/godcedric/GitLocal/KDDCUP2017/final_data/train_mean/volume_train_with_mean.csv', index=False)
+
+# 取平均预测
+travel_time_submission['start_time'] = travel_time_submission['time_window'].map(lambda x: datetime.strptime(x.split(',')[0][1:], '%Y-%m-%d %H:%M:%S'))
+travel_time_submission['route'] = travel_time_submission['intersection_id'].astype(str) + '-' + travel_time_submission['tollgate_id'].astype(str)
+travel_time_submission['weekday'] = travel_time_submission['start_time'].map(lambda x: x.weekday())
+travel_time_submission['time'] = travel_time_submission['start_time'].map(lambda x: x.time())
+
+volume_submission['start_time'] = volume_submission['time_window'].map(lambda x: datetime.strptime(x.split(',')[0][1:], '%Y-%m-%d %H:%M:%S'))
+volume_submission['pair'] = volume_submission['tollgate_id'].astype(str) + '-' + volume_submission['direction'].astype(str)
+volume_submission['weekday'] = volume_submission['start_time'].map(lambda x: x.weekday())
+volume_submission['time'] = volume_submission['start_time'].map(lambda x: x.time())
+
+
+# 把time映射成1～72
+from collections import defaultdict
+time_start = datetime(2016,10,17,0,0,0)
+timedic = defaultdict(int)
+for i in range(72):
+    timedic[time_start.time()] = i+1
+    time_start = time_start + timedelta(minutes=20)
+travel_time_submission['timemap'] = travel_time_submission['time'].map(lambda x:timedic[x])
+
+# 时间映射成1～72
+volume_submission['timemap'] = volume_submission['time'].map(lambda x:timedic[x])
+
+for i in range(len(travel_time_submission)):
+    route_key = travel_time_submission.ix[i, 'route']
+    weekday_key = travel_time_submission.ix[i, 'weekday']
+    timemap_key = travel_time_submission.ix[i, 'timemap']
+    value = time_group[route_key][weekday_key][timemap_key]
+    travel_time_submission.ix[i, 'avg_travel_time'] = value
+
+for i in range(len(volume_submission)):
+    pair_key = volume_submission.ix[i, 'pair']
+    weekday_key = volume_submission.ix[i, 'weekday']
+    timemap_key = volume_submission.ix[i, 'timemap']
+    value = volume_group[pair_key][weekday_key][timemap_key]
+    volume_submission.ix[i, 'volume'] = value
+
+travel_time_submission = travel_time_submission.drop(['start_time', 'route', 'weekday', 'time', 'timemap'], axis=1)
+volume_submission = volume_submission.drop(['start_time', 'pair', 'weekday', 'time', 'timemap'], axis=1)
+
+# 输出
+travel_time_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/phase2.5/Mean/travel_time_submission.csv', index=False)
+volume_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/phase2.5/Mean/volume_submission.csv', index=False)
+
+
+## 老方法
+"""
 ### 取平均预测
 
 travel_time = travel_time_train_data[['avg_travel_time', 'route', 'start_time']]
@@ -178,7 +249,7 @@ temp = np.concatenate((temp1, temp1, temp1, temp1, temp1, temp1, temp1, \
 
 volume_before2hour['predict'] = temp
 
-"""
+
 ###  均值修正
 
 travel_time_before2hour = travel_time_before2hour.fillna(method = 'ffill')
@@ -207,7 +278,7 @@ volume_submission['volume'] = volume_submission['volume'] + correct
 
 travel_time_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/phase1.5/mean1.5/2小时修正/travel_time_submission.csv', index=False)
 volume_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/phase1.5/mean1.5/2小时修正/volume_submission.csv', index=False)
-"""
+
 
 ### 系数修正
 
@@ -251,3 +322,4 @@ volume_submission['volume'] = volume_submission['volume'] + correct
 
 travel_time_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/phase2.0/Mean/travel_time_submission.csv', index=False)
 volume_submission.to_csv('/home/godcedric/GitLocal/KDDCUP2017/submission_result/phase2.0/Mean/volume_submission.csv', index=False)
+"""
